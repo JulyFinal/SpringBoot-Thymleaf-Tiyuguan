@@ -1,0 +1,128 @@
+body{
+	margin:0px;
+	background-image:url(../images/bid/body_bg.png);
+	background-repeat:repeat-x;
+	text-align:center;
+}
+.topBannerCenter{
+	width:994px;
+	height:124px;
+	background-image:url(../images/bid/top_bg.png);
+}
+.logoImgDiv{
+	width:194px;
+	height:64px;
+	background-image:url(../images/bid/logo.png);
+	background-repeat:no-repeat;
+}
+#mainBody{
+	width:994px;
+	height:605px;
+	background-image:url(../images/bid/center_bg1.png);
+	background-repeat:no-repeat;
+}
+.rightInfoDiv{
+	width:274px; 
+	margin-left:30px; 
+	margin-top:15px; 
+	background-image:url(../images/bid/neirong_bg.png);
+	padding-bottom:28px;
+}
+.subRightInfoDiv{
+	width:100%; 
+	height:36px; 
+	background-image:url(../images/bid/h1_bg.png);
+}
+.rightInfoLine{
+	background-image:url(../images/bid/xuxian_bg.png); 
+	background-position:bottom; 
+	background-repeat:repeat-x;
+}
+.infiniteCarousel {
+width: 586px;
+position: relative;
+}
+.infiniteCarousel .wrapper {
+width: 498px; /* .infiniteCarousel width - (.wrapper margin-left + .wrapper margin-right) */
+overflow: auto;
+height: 110px;
+margin: 0 50px;
+position: absolute;
+top: 0;
+border:2px solid #fff;
+background-color:#f6f4f1;
+}
+.infiniteCarousel ul a img {
+border: 4px solid #d5d5d5;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+}
+.infiniteCarousel .wrapper ul {
+width: 750px; /* single item * n */
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0;
+padding:0;
+position: absolute;
+top: 0;
+}
+.infiniteCarousel ul li {
+display:block;
+float:left;
+padding: 10px;
+height: 66px;
+width: 78px;
+}
+.infiniteCarousel ul li img {
+-webkit-transition: border-color 400ms;
+}
+.infiniteCarousel ul:hover li img {
+border-color: #d5d5d5 ;
+}
+.infiniteCarousel ul:hover li:hover img {
+border-color: #f88f45 ;
+}
+.infiniteCarousel ul li a img {
+display:block;
+}
+.infiniteCarousel .arrowleft{
+display: block;
+height: 33px;
+width: 32px;
+background: url(../images/bid/arr_left.png) no-repeat;
+text-indent: -999px;
+position: absolute;
+top: 35px;
+cursor: pointer;
+outline: 0;
+}
+.infiniteCarousel .arrowright{
+display: block;
+height: 33px;
+width: 32px;
+background: url(../images/bid/arr_right.png) no-repeat;
+text-indent: -999px;
+position: absolute;
+top: 35px;
+cursor: pointer;
+outline: 0;
+}
+.infiniteCarousel .forward {
+right: 0;
+}
+.infiniteCarousel .back {
+left: 0;
+}
+.bottomLeft{
+	background-image:url(../images/bid/bottom_left.png);
+	background-repeat:repeat-y;
+}
+.bottomRight{
+	background-image:url(../images/bid/bottom_right.png);
+	background-repeat:repeat-y;
+}
+.bottomCenter{
+	background-image:url(../images/bid/bottom_bg.png);
+	background-repeat:repeat-x;
+}

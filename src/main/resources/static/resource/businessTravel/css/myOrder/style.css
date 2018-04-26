@@ -1,0 +1,304 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+Buly
+2015-01-27
+商城购票系统
+*/
+#top_gn{
+	
+	padding:0 20px;
+	background-color:#f5f5f5;
+	border-bottom:1px solid #dbdbdb;
+	}
+.topgn_left{
+	float:left;
+	height:30px;
+	font:12px "宋体";
+	color:#515151;
+	line-height:30px;
+	text-align:left;
+	}
+.topgn_left a{
+	padding:0 15px;
+	margin-left:10px;
+	}	
+.topgn_right{
+	height:30px;
+	line-height:30px;
+	text-align:right;
+	}
+.topgn_right a{
+	font:12px "宋体";
+	color:#515151;
+	line-height:32px;
+	padding:0 15px;
+	}
+.bb_link{
+	background:url(../../../../resource/businessTravel/images/myOrder/bb_logo.gif) no-repeat left;
+}
+/*界面标志  我的订单*/
+#toplogo_div{
+	background:url(../../../../resource/businessTravel/images/myOrder/top_bg.gif) repeat-x left;
+	border-bottom:1px solid #047cdd;
+	}
+.logocont_div{
+	width:100%;
+	height:67px;
+	margin:0 auto;
+	}
+.logo_tb{
+	float:left;
+	margin-top:17px;
+	margin-left:87px;
+	}
+.logo_tb a{
+	margin-right:15px;
+	}	
+.logo_tb span{
+	font:20px "微软雅黑";
+	color:#fff;
+	}
+.shop_div{
+	float:right;
+	width:114px;
+	height:36px;
+	margin-top:16px;
+	background:url(../../../../resource/businessTravel/images/myOrder/zh_tb.gif) no-repeat 5px center;
+	background-color:#fcb200;
+	}
+.shop_div_phone{
+	float:right;
+	width:209px;
+	height:36px;
+	margin:16px 20px 0px 20px;
+	background:url(../../../../resource/businessTravel/images/myOrder/tel_butt.gif) no-repeat;
+}
+#tel_div{
+	position:absolute;
+	top:82px;
+	*right:19px;
+	_right:39px;
+	width:202px;
+	padding:5px 3px;
+	border:1px solid #0084e1;
+	background-color:#ebf7ff;
+	}
+#tel_div{
+	text-align:left;
+}
+.tel_contdiv{
+	padding:5px 0;
+	border-bottom:1px dashed #038ae9;
+	}
+.tel_contdiv p{
+	font:12px "宋体";
+	color:#333;
+	line-height:1.2em;
+	}	
+.tel_contdiv p .tel_span1{
+	font:bold 12px "宋体";
+	color:#018aea; 
+	}	
+.tel_contdiv p .tel_span2{
+	font:12px "微软雅黑";
+	color:#ff7300;
+	padding:0 5px; 
+	}
+.shopcont{
+	height:36px;
+	padding-left:37px;
+	}
+.shopcont_font{
+	float:left;
+	font:bold 14px "宋体";
+	color:#fff;
+	line-height:36px;
+	padding-right:11px;
+	margin-right:5px;
+	cursor:pointer;
+	text-decoration:none;
+/*background:url(../../../../resource/businessTravel/images/myOrder/shop_fg.gif) no-repeat right top;*/
+	}
+.shopcont_font_a{
+	display:block;
+	font:14px "微软雅黑";
+	color:#fff;
+	line-height:36px;
+	}
+
+/*界面中部内容*/
+#center{
+	width:1182px;
+	margin:0 auto;
+	padding-top:15px;
+	overflow:hidden;
+	}
+/*左侧导航*/	
+#left_nav_div{
+	
+	width:193px;
+	border:1px solid #ebebeb;
+	background-color:#fbfbfb;
+	padding-bottom:20px;
+	}
+#left_nav_div h1{
+	height:31px;
+	font:bold 14px "宋体";
+	color:#505050;
+	line-height:31px;
+	border-bottom:1px solid #e9e9e9;
+	background-color:#f1f1f1;
+	padding-left:5px;
+	}
+#left_nav_div ul li{
+	display:block;
+	height:31px;
+	}
+#left_nav_div ul li .one_a{
+	display:block;
+	font:12px "宋体";
+	color:#333;
+	line-height:31px;
+	padding-left:10px;
+	}
+#left_nav_div ul li .one_a:hover{
+	color:#0090f6;
+	background-color:#eef8ff;
+	border-bottom:1px solid #ddf1ff;
+	}
+.menuOK{
+	color:#0090f6;
+	background-color:#eef8ff;
+	border-bottom:1px solid #ddf1ff;
+}	
+/**右侧表单*/
+#right_tab_div{
+	padding-left:220px;
+	}
+#right_tab_div table{
+	font:12px "宋体";
+	}	
+.tab_titel{
+	background-color:#e1f1fe;
+	padding-left:10px;
+	}
+.tab_titel h1{
+	font:17px "微软雅黑";
+	color:#048aeb;
+	line-height:32px;
+	}
+.tab_input{
+	width:136px;
+	height:22px;
+	border:1px solid #dcdcdc;
+	}
+
+.tab_butt{
+	cursor:pointer;
+	width:54px;
+	height:24px;
+	font:12px "宋体";
+	color:#fff;
+	text-align:center;
+	background-color:#f9af00;
+	border:1px solid #f9af00;
+	}
+.tab_butt2{
+	width:54px;
+	height:24px;
+	font:12px "宋体";
+	color:#a2a0a1;
+	text-align:center;
+	background-color:#f0f0f0;
+	border:1px solid #e4e4e4;
+	}
+.tab_cont{
+	padding-bottom:45px;
+	border:1px solid #eaeaea;
+	}
+.tab_cont table{
+	width:100%;
+	_width:957px;
+	}
+.tab_cont table tr td{
+	border-bottom:1px solid #f0f0f0;
+}
+
+#copyright{
+	width:100%;
+	height:145px;
+	margin:0 auto;
+	margin-top:30px;
+	text-align:center;
+	
+	}
+#copyright .copy_color{
+	height:30px;
+	background-color:#41a0ff
+	}
+.ft-logo{
+	margin:30px 0px 10px 0px;
+	text-align:center;
+}
+.sysc{
+	margin-left:20px;
+}
+.sysc li{
+	text-align:left;
+	font: 17px "微软雅黑";
+	line-height: 40px;
+	padding-left: 10px;
+	background: url(../../../../resource/businessTravel/images/myOrder/help_a_bg.png) no-repeat left center;
+}
+.sysc li a{
+	color: #1791fe;
+}
+.hotel_order_search{
+	width:195px;
+	height:52px;
+}
+.hotel_order_search a{
+	margin:0;
+	padding:0;
+	cursor:pointer;
+}
+.order_search_img{
+	width:98px;
+	height:40px;
+	float:right;
+	background: url(../../../../resource/businessTravel/images/myOrder/jp_link.png) no-repeat;
+}
+.hotel_search_img{
+	width:97px;
+	height:40px;
+	float:left;
+	background: url(../../../../resource/businessTravel/images/myOrder/jd_link.png) no-repeat;
+}
+.order_search_img_ok{
+	width:98px;
+	height:40px;
+	float:right;
+	background: url(../../../../resource/businessTravel/images/myOrder/jp_hover.png) no-repeat;
+}
+.hotel_search_img_ok{
+	width:97px;
+	height:40px;
+	float:left;
+	background: url(../../../../resource/businessTravel/images/myOrder/jd_hover.png) no-repeat;
+}
+.order_bb{
+	cursor:pointer;
+	width:195px;
+	height:38px;
+	margin-bottom:6px;
+	background: url(../../../../resource/businessTravel/images/myOrder/tjfx_tb_link.png) no-repeat;
+}
+.order_bb_ok{
+	cursor:pointer;
+	background: url(../../../../resource/businessTravel/images/myOrder/tjfx_tb.png) no-repeat;
+}
+.order_bb_no{
+	cursor:pointer;
+	background: url(../../../../resource/businessTravel/images/myOrder/tjfx_tb_link.png) no-repeat;
+}

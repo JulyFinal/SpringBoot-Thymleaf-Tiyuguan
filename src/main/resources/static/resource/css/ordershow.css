@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#head-Orderpublicity{
+    width: 100%;
+    height: 100px;
+    background: #efedee;
+    border-top: 1px solid #dcdadb;
+    border-bottom: 1px solid #dcdadb;
+    position:fixed;
+    top:26px;left:0;
+}
+.Orderpublicity-container{
+    width: 965px;
+    height: auto;
+    margin:0 145px;
+}
+.Orderpublicity-container .kf{
+    width: 100px;
+    float:left;
+    position:absolute;
+}
+.Orderpublicity-container .btn{
+    width: 70px;
+    height: 54px;
+    position: relative;
+    left: 98px;
+    top:23px;
+    float:left;
+}
+.Orderpublicity-container .btn1{
+    width: 70px;
+    height: 27px;
+    background:#ed4a46;
+    color:#fff;
+    font-size: 14px;
+    border: 1px solid #e83434;
+}
+.Orderpublicity-container  .btn2{
+    width: 70px;
+    height: 27px;
+    background:#fcfcfc;
+    color:#949393;
+    font-size: 14px;
+    border: 1px solid #cfcdcd;
+}
+.Orderpublicity-container  .scrollinformation{
+    width: 710px;
+    height: 66px;
+    position: relative;
+    left:100px;
+    top:17px;
+    float:left;
+    overflow:hidden;
+
+}
+.Orderpublicity-container  .scrollinformation-arrow{
+    width: 24px;
+    height: 66px;
+    background: #fff;
+    border:1px solid #dbdada;
+    float:left;
+    text-align: center;
+}
+.Orderpublicity-container  .scrollinformation-information{
+    width: 354px;
+    height: 66px;
+    background: #fff;
+    border:1px solid #dbdada;
+    color:#7f7f7f;
+    line-height: 16px;
+    font-size: 12px;
+    text-align:left;
+    margin-right: 2px;
+    float:left;
+}
+.Orderpublicity-container .scrollinformation-information .scrollinformation-information-left{
+    width: 68px;
+    height: 66px;
+    background: #fff;
+    border-right: 1px solid #dbdada;
+    margin-left: 16px;
+    float:left;
+}
+.Orderpublicity-container .scrollinformation-information .scrollinformation-information-right{
+    height: 66px;
+    margin-left: 10px;
+}
+.scrollinformation-information-right ul{margin-left: 40px;}
+.scrollinformation-information-right ul li{line-height:24px;}
+.scrollinformation-information-right ul li span{color:red; margin-left: 120px;}
+.scrollinformation-information-right ul li a{color:red; margin-right: 32px;}
+
+.seemore{
+    width: 60px;
+    height: 66px;
+    background: #f14c47;
+    border:1px solid #ed352f;
+    float:right;
+    margin-top: 17px;
+    font-size: 14px;
+    color:#fff;
+    text-align: center;
+    margin-left:0px;
+}
+.seemore a{
+    color:#fff;
+}
+.seemore p{
+    line-height: 6px;
+    margin-top: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+

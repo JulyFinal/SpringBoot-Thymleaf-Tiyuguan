@@ -1,0 +1,144 @@
+@charset "utf-8";
+/*制造商直供 start*/
+.main-nav .menu2{
+	position:relative;
+	float:left;
+	margin-left: 10px;
+	z-index: 2;
+}
+
+.jd-main-nav .menu2{
+	position:relative;
+	float:left;
+	margin-left: 10px;
+	z-index: 2;
+}
+
+.zzs-bg a{
+	display:block;
+	display:inline-block;
+	font-size:14px;
+	height:33px;
+	_height:33px;
+	line-height:33px;
+	color: #ffbeba;
+	text-align: center;
+}
+.zzs-bgj a{
+	display:block;
+	display:inline-block;
+	font-size:14px;
+	height:39px;
+	_height:39px;
+	line-height:39px;
+	color: #fff;
+	text-align: center;
+}
+
+.zzs_a{
+	display:block;
+	display:inline-block;
+	font-size:14px;
+	height:33px;
+	_height:33px;
+	line-height:33px;
+	color: #ffbeba;
+	text-align: center;
+}
+.zzs_aj{
+	display:block;
+	display:inline-block;
+	font-size:14px;
+	height:39px;
+	_height:39px;
+	line-height:39px;
+	color: #fff;
+	text-align: center;
+}
+.zzs-bg{
+	position:relative;
+	background-color:#B80211;
+}
+.zzs-bgj{
+	position:relative;
+	background-color:#cc0001;
+}
+
+.zzs-bg i{
+	width:18px;
+	height:18px;
+	position:absolute;
+	top:-5px;
+	right:0px;
+	background:url(../images/new.gif) no-repeat;
+}
+
+.zzs-bgj i{
+	width:18px;
+	height:18px;
+	position:absolute;
+	top:-5px;
+	right:0px;
+	background:url(../images/new.gif) no-repeat;
+}
+.zzs-bg2{
+	position:relative;
+	height:33px;
+	_height:33px;
+	font:bold 14px "宋体";
+	border:1px solid #9d030f;
+	border-bottom:none;
+	background-color:#fff;
+	margin-top: -1px;
+	margin-left:-1px;
+}
+.zzs-bgj2{
+	position:relative;
+	height:39px;
+	_height:39px;
+	font:bold 14px "宋体";
+	border:1px solid #9d030f;
+	border-bottom:none;
+	background-color:#fff;
+	margin-top: -1px;
+	margin-left:-1px;
+}
+.zzs-bg2 i{
+	width:18px;
+	height:18px;
+	position:absolute;
+	top:-5px;
+	right:0px;
+	background:url(../images/new.gif) no-repeat;
+}
+
+#zzs_ul_li .townav_ul{
+	position:absolute;
+	display:none;
+	_left:-378px;
+	_top:0px;
+	*left:0px;
+	*top:33px;
+	width:218px;
+	height:auto;
+	border:1px solid #9d030f;
+	border-top:none;
+	background-color:#fff;
+	margin-left:-1px;
+	}
+#zzs_ul_li .townav_ul li{
+	background-image:none;
+	border-bottom:1px solid #ececec;
+	}
+#zzs_ul_li .townav_ul li a{
+	float:left;
+	width:218px;
+	height:50px;
+	font:bold 12px "宋体";
+	color:#fff;
+	text-align: left;
+}
+/*制造商直供 end*/
+
+
+

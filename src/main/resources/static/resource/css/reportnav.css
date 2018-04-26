@@ -1,0 +1,63 @@
+/* CSS Document */
+body, html {
+  height: 100%;
+}
+* html,* html body /* 修正IE6振动bug */{background-image:url(about:blank);background-attachment:fixed;height: 100%;}
+.report_nav_absolute{
+	width:46px;
+	height:100%;
+	position: fixed;
+	position: fixed;bottom:auto;top:0;left:0;
+	_position:absolute;
+	_top:expression(eval(document.documentElement.scrollTop));	
+	_left:0;
+}
+
+#report_nav{
+	width:41px;
+	height:100%;
+	padding-top: 85px;
+	_margin-top:-45px;
+	background:url(../images/reportnav/gn_bg2.png) repeat-y left -1px;
+}
+#report_nav div{
+	margin-bottom:20px;
+}
+#report_nav a{
+	float:left;
+	width:33px;
+	height:40px;
+	margin-bottom:12px;
+	padding:3px 0;
+}
+#report_nav a img{
+	margin-left:4px;
+}
+#report_nav a:hover{
+	background-color:#b50064;
+}
+#report_nav_btn{
+	position:absolute;
+	left:33px;
+	top:313px;
+	width:13px;
+	height:46px;
+}
+#report_nav_btn a{
+	float:left;	
+	width:13px;
+	height:46px;
+	background:url(../images/reportnav/left_btn.png) no-repeat left center;
+	_background:url(../images/reportnav/left_btn.gif) no-repeat left center;
+}
+
+
+#report_nav_btn .hidden{
+	background:url(../images/reportnav/right_btn.png) no-repeat left center;
+	_background:url(../images/reportnav/right_btn.gif) no-repeat left center;
+}
+
+
+
+
+

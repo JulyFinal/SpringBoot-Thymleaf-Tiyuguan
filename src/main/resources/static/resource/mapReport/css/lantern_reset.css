@@ -1,0 +1,110 @@
+@charset "utf-8";
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+a{text-decoration:none;color:#000}
+img{border:none; margin:0; padding:0;}
+input{font:12px Arial;}
+div{ text-align:left;}
+ul{ list-style:none;}
+ol{ list-style:none;}
+body{text-align:center;font-size:12px;color:#333;}
+
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+ header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+#order{
+	width:1280px;
+	overflow:hidden;
+	border:1px solid #0832ba;
+	background:url(../images/bdw_order.gif) no-repeat left top;
+	background-color:#010f72;
+	margin-left: 20px;
+	z-index: 1000;
+	}
+.oder_cont{
+	margin-left:85px;
+	overflow:hidden;
+	}	
+.oder_cont span{
+	float:left;
+	}	
+.order_tab{
+	float:left;
+	padding:7.5px 0px;
+	}	
+.tab_cont{
+	float:left;
+	width:335px;
+	margin-left:7.5px;
+	margin-right:7.5px;
+	background-color:#0832ba;
+	border:1px solid #033bf0;
+	cursor:pointer;
+	}	
+.tab_cont table{
+	font:12px "宋体";
+	color:#04eaf9;
+	}	
+.tab_cont table tr td{
+	padding:0 10px;
+	}
+.tab_cont table tr td i{
+	float:left;
+	}		
+.tab_cont table tr td b{
+	float:right;
+	}
+.order_more{
+	font:12px "宋体";
+	color:#04e9fb;
+	line-height:64px;
+	padding:0 10px;
+	}		
+
+	

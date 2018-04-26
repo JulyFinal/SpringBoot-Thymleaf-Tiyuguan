@@ -1,0 +1,119 @@
+@charset "utf-8";
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	font-family: "微软雅黑";
+}
+
+a{text-decoration:none;color:#838383;}
+img{border:none; margin:0; padding:0;}
+input{font:15px Arial;}
+div{ text-align:left;}
+ul{ list-style:none;}
+ol{ list-style:none;}
+body{text-align:center;font-size:12px;color:#333; font-size:62.5%;}
+
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+ header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a, button, input ,textarea{
+  outline: 0 none;
+  text-decoration: none;
+}
+
+.option{
+	overflow: hidden;
+}
+
+.select-box {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	height: 34px;
+	margin-left: 0;
+	
+	border: 0;
+
+	line-height: 34px;
+	font-size: 15px;
+	color: #333;
+}
+
+.select-box span,.right_ioc {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -5px;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #ddd;
+  border-right: 2px solid #ddd;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.new-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 30px;
+  opacity: 0;
+}
+.w49{
+	width:49%!important;
+}
+.mt5{
+	margin-top:5px;
+}
+.f_r{
+	  float: right!important;
+}
+.p10{
+	padding:0px 10px;
+}
+.p15{
+	padding:0px 15px;
+}

@@ -1,0 +1,302 @@
+/*成本中心 */
+#tyCostUnitDiv {
+	position: absolute;
+	left: -200px;
+    top: 22px;
+	width:502px;
+	height:355px;
+	margin:0 auto;
+	padding:5px 5px;
+	background-color:#ededef;
+	z-index:1000;
+	display: none;
+}
+
+#tyCostUnitDiv .tyCostUnitDiv_spyt_box{
+	height:353px;
+	width:500px;
+	border:1px solid #f83a3a;
+	background-color:#fff;
+	position: absolute;
+	left: 5px;
+}
+
+#tyCostUnitDiv .tyCostUnitDiv_spyt_box .costunit_box_title{
+	height:30px;
+	background-color:#fb3a3b;
+}
+#tyCostUnitDiv .tyCostUnitDiv_spyt_box .costunit_box_title h1{
+	float:left;
+	font:15px "微软雅黑";
+	line-height:30px;
+	color:#fff;
+	padding-left:10px;
+}
+#tyCostUnitDiv .tyCostUnitDiv_spyt_box .costunit_box_title a{
+	float:right;
+	margin:9px 11px 0 0;
+}
+#tyCostUnitDiv .tyCostUnitDiv_spyt_box .costunit_chaxun{
+	height:28px;
+	padding-left:10px;
+	border-bottom:1px solid #e3e3e3;
+	background-color:#f6f6f6;
+}
+#tyCostUnitDiv .tyCostUnitDiv_spyt_box .costunit_chaxun .costunit_input{
+	width:140px;
+	height:18px;
+	border:1px solid #d2cac8;
+	padding-left:0px;
+	margin-top:4px;
+}
+#tyCostUnitDiv .tyCostUnitDiv_spyt_box .costunit_chaxun .costunit_cx_button{
+	width:42px;
+	height:20px;
+	font:12px "宋体";
+	color:#fff;
+	margin:0px 0 0 0px;
+	border:1px solid #f99e33;
+	background-color:#ffb400;
+	cursor: pointer;
+}
+#tyCostUnitDiv .tyCostUnitDiv_spyt_box .costunit_chaxun .cz_button{
+	color:#8b8788;
+	border:1px solid #c7c7c7;
+	background-color:#fbf9fa;
+}
+.costUnitTable th{
+	height: 25px;
+	text-align: center;
+	vertical-align: middle;
+	color: #545454;
+	font-weight: bold;
+	border-bottom: 1px solid #e3e3e3;
+}
+.costUnitTable td{
+	height:25px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+#tyCostUnitDiv .tyCostUnitDiv_spyt_box .qd_qx{
+	height:40px;
+	text-align:center;
+	border-top:1px solid #f0f0f0;
+}
+#tyCostUnitDiv .tyCostUnitDiv_spyt_box .qd_qx .qd_button{
+	width:55px;
+	height:22px;
+	font:12px "宋体";
+	color:#fff;
+	margin:10px 0 0 20px;
+	background-color:#f83a3a;
+	border:1px solid #f70b0b;
+	cursor: pointer;
+}
+#tyCostUnitDiv .tyCostUnitDiv_spyt_box .qd_qx .qx_button{
+	color:#333;
+	background-color:#fff;
+	border:1px solid #c9c9c9;
+}
+
+
+/*全成本指标 */
+#tyAcstCodeDiv {
+	position: absolute;
+	left: -200px;
+    top: 22px;
+	width:502px;
+	height:355px;
+	margin:0 auto;
+	padding:5px 5px;
+	background-color:#ededef;
+	z-index:1000;
+	display: none;
+}
+
+#tyAcstCodeDiv .tyAcstCodeDiv_spyt_box{
+	height:353px;
+	width:500px;
+	border:1px solid #f83a3a;
+	background-color:#fff;
+	position: absolute;
+	left: 5px;
+}
+
+#tyAcstCodeDiv .tyAcstCodeDiv_spyt_box .acstCode_box_title{
+	height:30px;
+	background-color:#fb3a3b;
+}
+#tyAcstCodeDiv .tyAcstCodeDiv_spyt_box .acstCode_box_title h1{
+	float:left;
+	font:15px "微软雅黑";
+	line-height:30px;
+	color:#fff;
+	padding-left:10px;
+}
+#tyAcstCodeDiv .tyAcstCodeDiv_spyt_box .acstCode_box_title a{
+	float:right;
+	margin:9px 11px 0 0;
+}
+#tyAcstCodeDiv .tyAcstCodeDiv_spyt_box .acstCode_chaxun{
+	height:28px;
+	padding-left:10px;
+	border-bottom:1px solid #e3e3e3;
+	background-color:#f6f6f6;
+}
+#tyAcstCodeDiv .tyAcstCodeDiv_spyt_box .acstCode_chaxun .acstCode_input{
+	width:140px;
+	height:18px;
+	border:1px solid #d2cac8;
+	padding-left:0px;
+	margin-top:4px;
+}
+#tyAcstCodeDiv .tyAcstCodeDiv_spyt_box .acstCode_chaxun .acstCode_cx_button{
+	width:42px;
+	height:20px;
+	font:12px "宋体";
+	color:#fff;
+	margin:0px 0 0 0px;
+	border:1px solid #f99e33;
+	background-color:#ffb400;
+	cursor: pointer;
+}
+#tyAcstCodeDiv .tyAcstCodeDiv_spyt_box .acstCode_chaxun .cz_button{
+	color:#8b8788;
+	border:1px solid #c7c7c7;
+	background-color:#fbf9fa;
+}
+.acstCodeTable th{
+	height: 25px;
+	text-align: center;
+	vertical-align: middle;
+	color: #545454;
+	font-weight: bold;
+	border-bottom: 1px solid #e3e3e3;
+}
+.acstCodeTable td{
+	height:25px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+#tyAcstCodeDiv .tyAcstCodeDiv_spyt_box .qd_qx{
+	height:40px;
+	text-align:center;
+	border-top:1px solid #f0f0f0;
+}
+#tyAcstCodeDiv .tyAcstCodeDiv_spyt_box .qd_qx .qd_button{
+	width:55px;
+	height:22px;
+	font:12px "宋体";
+	color:#fff;
+	margin:10px 0 0 20px;
+	background-color:#f83a3a;
+	border:1px solid #f70b0b;
+	cursor: pointer;
+}
+#tyAcstCodeDiv .tyAcstCodeDiv_spyt_box .qd_qx .qx_button{
+	color:#333;
+	background-color:#fff;
+	border:1px solid #c9c9c9;
+}
+/*仓库 */
+#tyDepotIdDiv {
+	position: absolute;
+	left: -200px;
+    top: 22px;
+	width:502px;
+	height:355px;
+	margin:0 auto;
+	padding:5px 5px;
+	background-color:#ededef;
+	z-index:1000;
+	display: none;
+}
+
+#tyDepotIdDiv .tyDepotIdDiv_spyt_box{
+	height:353px;
+	width:500px;
+	border:1px solid #f83a3a;
+	background-color:#fff;
+	position: absolute;
+	left: 5px;
+}
+
+#tyDepotIdDiv .tyDepotIdDiv_spyt_box .depotId_box_title{
+	height:30px;
+	background-color:#fb3a3b;
+}
+#tyDepotIdDiv .tyDepotIdDiv_spyt_box .depotId_box_title h1{
+	float:left;
+	font:15px "微软雅黑";
+	line-height:30px;
+	color:#fff;
+	padding-left:10px;
+}
+#tyDepotIdDiv .tyDepotIdDiv_spyt_box .depotId_box_title a{
+	float:right;
+	margin:9px 11px 0 0;
+}
+#tyDepotIdDiv .tyDepotIdDiv_spyt_box .depotId_chaxun{
+	height:28px;
+	padding-left:10px;
+	border-bottom:1px solid #e3e3e3;
+	background-color:#f6f6f6;
+}
+#tyDepotIdDiv .tyDepotIdDiv_spyt_box .depotId_chaxun .depotId_input{
+	width:140px;
+	height:18px;
+	border:1px solid #d2cac8;
+	padding-left:0px;
+	margin-top:4px;
+}
+#tyDepotIdDiv .tyDepotIdDiv_spyt_box .depotId_chaxun .depotId_cx_button{
+	width:42px;
+	height:20px;
+	font:12px "宋体";
+	color:#fff;
+	margin:0px 0 0 0px;
+	border:1px solid #f99e33;
+	background-color:#ffb400;
+	cursor: pointer;
+}
+#tyDepotIdDiv .tyDepotIdDiv_spyt_box .depotId_chaxun .cz_button{
+	color:#8b8788;
+	border:1px solid #c7c7c7;
+	background-color:#fbf9fa;
+}
+.depotIdTable th{
+	height: 25px;
+	text-align: center;
+	vertical-align: middle;
+	color: #545454;
+	font-weight: bold;
+	border-bottom: 1px solid #e3e3e3;
+}
+.depotIdTable td{
+	height:25px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+#tyDepotIdDiv .tyDepotIdDiv_spyt_box .qd_qx{
+	height:40px;
+	text-align:center;
+	border-top:1px solid #f0f0f0;
+}
+#tyDepotIdDiv .tyDepotIdDiv_spyt_box .qd_qx .qd_button{
+	width:55px;
+	height:22px;
+	font:12px "宋体";
+	color:#fff;
+	margin:10px 0 0 20px;
+	background-color:#f83a3a;
+	border:1px solid #f70b0b;
+	cursor: pointer;
+}
+#tyDepotIdDiv .tyDepotIdDiv_spyt_box .qd_qx .qx_button{
+	color:#333;
+	background-color:#fff;
+	border:1px solid #c9c9c9;
+}

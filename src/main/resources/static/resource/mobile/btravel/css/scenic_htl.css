@@ -1,0 +1,99 @@
+@charset "utf-8";.body{background:#F5F5F5;font:normal 14px/1.5 Arial,"Lucida Grande",Verdana,"Microsoft YaHei",hei;color:#333;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-moz-user-select:none}
+.basefix:after{clear:both;content:'.';display:block;height:0;overflow:hidden}
+.price{color:#f93;font:600 18px/22px Arial}
+.price dfn{font-size:12px;font-style:normal;margin-right:3px}
+.price em{font-size:12px;margin-left:3px;font-style:normal}
+header h1{letter-spacing:0}
+h1,h2,h3,h4,h5,h6{font-family:Arial,"Lucida Grande",Verdana,"Microsoft YaHei",hei}
+
+
+.sh_hot_city{background-color:#fff;border-bottom:1px solid #bcbcbc;overflow:hidden;padding-left:3%;padding-top:10px}
+.sh_hot_city li{float:left;height:30px;line-height:30px;border:1px solid #dbdbdb;text-align:center;border-radius:6px;margin-right:2%;width:30%;margin-bottom:10px}
+.sh_hot_city li:active{background-color:#f5f5f5}
+.sh_city_box .cui-city-t{color:#333}
+.sh_city_box .letter_navi,.city_search .citys .letter_navi{color:#099fde;font-size:15px;width:15px;line-height:15px;position:fixed;right:0}
+.sh_city_box .letter_navi span,.city_search .citys .letter_navi span{display:block;text-align:center}
+.sh_city_box .letter_navi .large_letter,.city_search .citys .letter_navi .large_letter{position:absolute;background-color:#75c9ed;color:#FFF;height:50px;line-height:50px;width:50px;text-align:center;right:30px;font-size:24px;border-radius:6px}
+.sh_city_box .letter_navi .large_letter::after,.city_search .citys .letter_navi .large_letter::after{content:"";background-color:#75c9ed;position:absolute;width:12px;height:12px;right:-5px;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);top:50%;margin-top:-8px}
+.sh_history_city .clear_city_history{padding:20px 0;text-align:center}
+.sh_history_city .clear_city_history a{width:90%;height:30px;line-height:30px;display:inline-block;color:#FFF;background-color:#52BDE9;-webkit-border-radius:6px;border-radius:6px;text-align:center}
+.recommend_info .cost_notice{font-size:12px;line-height:16px}
+.detail_group_price{overflow:hidden;padding:10px 15px 10px 0;border-bottom:1px solid #DDD}
+.detail_group_price .group_price{color:#FF7A00;font-size:26px;float:left}
+.detail_group_price .group_price dfn{font-size:14px;vertical-align:8px;padding-right:2px}
+.detail_group_price .group_price span{font-size:14px;padding-left:2px}
+.detail_group_price .buybtn{font-size:16px;font-weight:600;color:#fefefe;padding:0 11px;height:34px;line-height:36px;text-align:center;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 2px 0 #e47c15;box-shadow:0 2px 0 #e47c15;background-color:#ff9a14;float:right}
+.detail_group_price .sh_discount{vertical-align:-12px}
+.recommend_info .from_htl_notice{color:#FF7D13;line-height:18px; border-top: 1px solid #DDD; padding-top: 8px; margin-top: 10px;}
+.recommend_info .from_htl_notice i{color:#FFF;background-color:#FF7D13;font-size:12px;display:inline-block;width:18px;height:18px;line-height:18px;text-align:center;margin-right:4px}
+.sh_order_wrap{padding:0 10px 46px}
+.sh_order_wrap .multiple_htl_input{background-color:#FFF;margin-top:0;border-top:1px solid #DDD}
+.sh_order_wrap .multiple_htl_input:first-of-type{border-top:0 none}
+.book_travel_time{background-color:#FFF;border:1px solid #E1E1E1;border-top:0 none;overflow:hidden;padding:14px 12px;-webkit-border-radius:0 0 6px 6px;border-radius:0 0 6px 6px}
+.book_travel_time .travel_date{float:left}
+.book_travel_time .travel_date .date{float:left;line-height:30px;height:30px;width:68px}
+.book_travel_time .travel_date .date strong{font-weight:normal;font-size:30px;float:left;padding-right:4px}
+.book_travel_time .travel_date .date span{font-size:12px;line-height:14px;float:left}
+.book_travel_time .travel_date .to{float:left;font-size:16px;padding:0 4px}
+.book_travel_time .travel_days{float:right;font-size:16px;padding-right:10px;line-height:30px;padding-left:22px;position:relative}
+.book_travel_time .travel_days::before{content:"";width:18px;height:18px;position:absolute;left:0;top:6px;background-position:0 -619px}
+.sh_order_wrap .pkg_detail h3{background-color:#0BA0DE;color:#FFF;font-weight:normal;-webkit-border-radius:6px;border-radius:6px}
+.sh_order_wrap .pkg_detail_info{border:1px solid #E1E1E1;overflow:hidden;background-color:#FFF;border-bottom:0 none}
+.sh_order_wrap .pkg_detail_info:first-of-type{-webkit-border-radius:6px 6px 0 0;border-radius:6px 6px 0 0}
+.sh_order_wrap .pkg_detail_info:last-of-type{-webkit-border-radius:0 0 6px 6px;border-radius:0 0 6px 6px;border-bottom:1px solid #E1E1E1}
+.sh_order_wrap .pkg_detail_info:only-of-type{-webkit-border-radius:6px;border-radius:6px}
+.sh_order_wrap .pkg_detail .htl_stay_time::before{width:14px;height:13px;background-position:0px -579px;vertical-align:-2px;margin-right:0}
+.sh_order_wrap .pkg_detail .htl_stay_time{color:#666;padding-left:0;padding-left:14px;border-top:0 none;background-color: #F2F2F2;}
+.sh_order_wrap .pkg_detail .htl_stay_time span{padding:0 2px;font-size:12px}
+.icon_home,.icon_phone,.icon_share,.icon_unfav,.icon_contact{width:42px;height:100%;top:0;position:relative;z-index:9;float:right}
+header i:active,.icon_home:active,.icon_phone:active,.icon_share:active,.icon_unfav:active,.icon_contact:active{opacity:.7}
+.icon_share:before,.icon_unfav:before,.icon_contact:before{background-image:url(http://pic.c-ctrip.com/h5/scenic_htl/spr_index_3.5.png);background-repeat:no-repeat;background-size:250px 250px}
+.headerview_detail .icon_share:before{width:17px;height:23px;background-position:-220px -90px;top:11px;right:12px}
+.headerview_detail .icon_unfav:before{width:23px;height:19px;top:15px;right:9px}
+.headerview_detail .icon_unfav:before{background-position:-190px -90px}
+.headerview_detail .icon_contact:before{content:""; position:absolute;width:22px; height:22px;background-position:-210px -200px;top:15px;right:9px;}
+.headerview_detail .returnico:before,.headerview_detail .icon_share:before,.headerview_detail .icon_unfav:before,.headerview_detail .icon_contact:before{z-index:2}
+.headerview_detail .returnico{z-index:3;background:none}
+.headerview_detail .returnico:before{position:relative;display:block;top:0;left:0;margin:14px 0 0 25px}
+.headerview_detail{position:fixed;z-index:101;left:0;top:0;width:100%;-webkit-transition:background-color 0.5s;transition:background-color 0.5s}
+.headerview_detail header{background-color:transparent;-webkit-box-sizing:border-box;box-sizing:border-box;padding-right:6px}
+.headerview_detail .returnico:after,.headerview_detail .icon_share:after,.headerview_detail .icon_unfav:after,.headerview_detail .icon_contact::after{background-color:rgba(9,159,222,0.6);width:30px;height:30px;content:'';position:absolute;left:6px;top:9px;z-index:1;-webkit-border-radius:50%;border-radius:50%;background-image:none;margin:0}
+.headerview_detail .returnico:after{left:16px}
+.headerview_bgcolor{background-color:rgba(9,159,222,1)}
+.headerview_bgcolor .returnico:after,.headerview_bgcolor .icon_share:after,.headerview_bgcolor .icon_unfav:after{background-color:transparent}
+.sh_city_box .cui-city-itmes .cui-city-n li{border-bottom-color:#DDD}
+.pkg_detail .htl_detail_multiple .htl_name_wrap{padding:6px 82px 4px 0;line-height:18px;position: relative;border-bottom: 1px solid #DDD;}
+.pkg_detail .htl_hot_wrap .img_wrap{margin:0 0 0 -88px;}
+.pkg_detail .htl_hot_wrap .htl_score_box{color:#666;font-size:12px;padding-left: 10px;}
+.pkg_detail .htl_hot_wrap .htl_score_box .ipt_score strong{font-weight:normal;color:#009ee1;font-size:18px}
+.sh_order_wrap .ipt_htl_btn{position:absolute;right:14px;top:6px;}
+.sh_order_wrap .htl_address_wrap{border-top:1px solid #DDD;padding-right:14px}
+.sh_order_wrap .pkg_detail .detail_multiple{padding-left:0;margin-left:14px;border-bottom:0 none}
+.sh_order_wrap .pkg_detail .htl_room_type{border-top:1px solid #DDD;margin-left:42px;padding:0 0 0 60px;border-bottom:0 none}
+.sh_order_wrap .htl_room_type .ord_z{margin:0 0 0 -60px;padding-left:0}
+.sh_order_wrap .htl_room_type .ord_z .spc_request{width:164px}
+.sh_order_wrap .htl_room_type .room_img_wrap{overflow:hidden;float:left;margin:14px 0 14px -60px;position:relative}
+.sh_order_wrap .htl_room_type .room_img_wrap .pic_number{position:absolute;color:#fff;text-align:right;z-index:1;bottom:0;width:100%;line-height:16px;padding-right:4px;box-sizing:border-box;font-size:12px}
+.sh_order_wrap .htl_room_type .room_img_wrap .pic_number strong{font-weight:normal}
+.sh_order_wrap .htl_room_type .room_img_wrap img{float:none;margin:0;display:block}
+.sh_order_wrap .ticket_detail_info .detail_multiple{border-bottom:1px solid #DDD}
+.sh_order_wrap .ticket_detail_info .detail_multiple:first-of-type{border-top:0 none}
+.sh_order_wrap .ticket_detail_info .detail_multiple:last-of-type{border-bottom:0 none}
+.sh_order_wrap .bottom_process_notice{padding:8px 4px}
+.flt_box{border:0;background:none}
+.flt_box h3{position:relative;line-height:28px}
+.hot_destination_pic{position:absolute;right:10px;bottom:0;width:75px;height:19px;background-image:url(http://pic.c-ctrip.com/h5/scenic_htl/hot_destination_pic.png);background-size:75px auto}
+.hot_city{padding-bottom:10px;background:#FFF}
+.hot_city a{border:1px solid #CCE9F6;background:none}
+.hot_city a.cur{background:#F0F9FD}
+.hot_city a:hover,.hot_city a:active{background:#F0F9FD}
+.much_choice{position:absolute;top:18px;right:0;color:#666;font-size:10px;font-weight:normal}
+.recommend_info .mutiple_htl_wrap{padding-right:30px!important;position:relative}
+.recommend_info .pkg_include .htl_address{position:relative;width:auto;margin:0 -30px 0 26px;padding:5px 30px 5px 18px;border-top:1px solid #E2E2E2}
+.recommend_info .pkg_include .htl_address::after{position:absolute;width:8px;height:8px;border-right:2px solid #A9A9A9;border-bottom:2px solid #A9A9A9;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg);content:"";top:50%;margin-top:-5px;right:10px}
+.recommend_info .pkg_include .htl_address i.icon{top:3px}
+.sh_order_wrap .htl_room_type .change_room_btn{top:0;right: 14px;}
+.sh_order_wrap .htl_room_type .num_selecter{top: 10px;right: 12px;}
+.sh_order_wrap .htl_room_type .sh_room_name{position: relative;border-bottom: 1px solid #DDD;padding-bottom: 6px;padding-right: 72px;}
+
+

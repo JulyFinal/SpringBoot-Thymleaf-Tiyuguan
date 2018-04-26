@@ -1,0 +1,272 @@
+/* CSS Document */
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	-ms-touch-action: none;
+}
+
+body,ul,li {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body {
+	font-size: 16px;
+	font-family: "Î¢ÈíÑÅºÚ",'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;;
+	overflow: hidden; /* this is important to prevent the whole page to bounce */
+}
+
+#header {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	background: #C00;
+	padding: 0;
+	color: #FFF;
+	font-size: 16px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#header span{
+	color: #FFF;
+	font-weight: bold;
+	font-size: 16px;	
+}
+
+#footer {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 42px;
+	background: #fff;
+	padding: 0;
+}
+
+#wrapper {
+	position: absolute;
+	z-index: 1;
+	top: 42px;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	overflow: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+#scroller {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width: 100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+
+
+.a-back {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 30px;
+	height: 32px;
+	text-decoration: none;
+}
+
+.a-back span{
+	display: inline-block;
+	width: 10px;
+	height: 18px;
+	margin-top: 6px;
+	background: url(../images/icon-back.png) -60px 0 no-repeat;
+	background-size: 180px 180px;
+	text-indent: -9999px;
+}
+
+.user-text-red2{
+	padding-left: 12px;
+	color: #a40000;
+}
+
+.red{
+	color: #a40000;
+}
+	
+.option-r{
+	position: absolute;
+	top: 7px;
+	right: 12px;
+}
+
+.user-txt{
+	font-size: 12px;
+	color: #6e6e6e;
+}
+
+.user-title{
+	position: relative;
+	padding: 7px 12px;
+	border-bottom: 1px solid #999;
+	font-size: 12px;
+	margin: 0;
+}
+
+.user-address-li{
+	margin-bottom: 10px;
+	border: 1px solid #999;
+}
+
+.user-address-ul{
+	clear: both;
+	margin: 0;
+	border-top: none;
+	list-style: none;
+}
+
+.user-address{
+	padding: 20px 12px;
+}
+
+.location-default-icon{
+	display: inline-block;
+	width: 16px;
+	height: 22px;
+	padding-right: 5px;
+	background: url(../images/icon-location-default.png) no-repeat;
+	vertical-align: middle;
+}
+
+.location-no-default-icon{
+	display: inline-block;
+	width: 16px;
+	height: 22px;
+	padding-right: 5px;
+	background: url(../images/icon-location-nodefault.png) no-repeat;
+	vertical-align: middle;
+}
+
+.user-address-span{
+	position:relative; display: block;overflow: hidden;clear: both;padding: 0 12px 8px;
+}
+
+.user-address-info{
+	display: block;overflow: hidden;padding-top: 10px;font-size: 12px;color: #6e6e6e;
+}
+
+.user-address-btn{
+	font-size: 12px;color: #282828;text-align: right; margin-top: 5px	
+}
+
+.user-address-bar{
+	padding: 0 15px;vertical-align: top;
+}
+
+.mrl-10{
+	margin-left: 10px;
+}
+
+/*ËÑË÷ÎÞÄÚÈÝÌáÊ¾*/
+#noResultMsg {
+	display: block;
+	height: 35px;
+	padding: 100px 20px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+}
+.noResultBox {
+	background-color: #fff;
+	height: 187px;
+	position: relative;
+	text-align: center;
+}
+
+.noResultBox p{
+	padding-top: 30px;
+	font-size: 13px;
+	text-align: center;
+	color: #707070;
+}
+
+.noResultBox .keyword{
+	color: #c00;
+}
+
+.noResultBox:after {
+	content: "";
+	position: absolute;
+	background: url(../images/searchresult.png) no-repeat;
+	background-size: 100%;
+	width: 85px;
+	height: 85px;
+	top: 33px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	position: absolute;
+}
+
+.a-add {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	width: 30px;
+	height: 32px;
+	text-decoration: none;
+}
+
+.a-add span{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-top: 6px;
+	background: url(../images/icon-add.png) no-repeat;
+	text-indent: -9999px;
+}
+
+.a-home {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	width: 30px;
+	height: 32px;
+	text-decoration: none;
+}
+
+.a-home span{
+	display:inline-block; 
+	width:25px; 
+	height:24px; 
+	background:url(../images/home.png); 
+	background-size: 25px 24px;
+	text-indent: -99999px;
+	margin-top: 3px;
+}

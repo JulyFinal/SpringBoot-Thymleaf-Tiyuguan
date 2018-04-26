@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jf.dao.AdminDao">
+	<!-- 查询列表 -->
+	<select id="getForPage" resultType="Admin">
+		SELECT * from t_admin
+	</select>
+	<!-- 查询是否存在 -->
+	<select id="checkExist" parameterType="String" resultType="Admin">
+		SELECT * from t_admin where no=#{0}
+	</select>
+	<!-- 根据ID查找 -->
+	<select id="getByid" parameterType="String" resultType="Admin">
+		SELECT
+		*FROM t_admin WHERE id=#{0}
+	</select>
+	<!-- 登录校验 -->
+	<select id="checkAdmin" parameterType="String" resultType="Admin">
+		SELECT *FROM t_admin WHERE no=#{no} AND pwd=#{pwd}
+	</select>
+	<!-- 修改密码校验 -->
+	<select id="checkAdminEmail"  resultType="Admin" >
+		SELECT *FROM t_admin WHERE no=#{no} AND email=#{email}
+	</select>
+	<!-- 修改密码 -->
+	<update id="changeAdminPwd" parameterType="Admin">
+		update t_admin set
+		pwd=#{pwd}
+		where id=#{id}
+	</update>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="Admin" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into t_admin(no,pwd,tel,email,name)
+		values(#{no},#{pwd},#{tel},#{email},#{name})
+	</insert>
+	<!-- 资料修改 -->
+	<update id="update" parameterType="Admin">
+		update t_admin set
+		pwd=#{pwd},tel=#{tel},email=#{email},name=#{name}
+		where id=#{id}
+	</update>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="int">
+		delete from t_admin where
+		id=#{id}
+	</delete>
+</mapper>

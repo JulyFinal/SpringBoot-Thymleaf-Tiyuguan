@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+
+#order{
+	width:1280px;
+	overflow:hidden;
+	border:1px solid #0832ba;
+	background:url(../images/bdw_order.gif) no-repeat left top;
+	background-color:#010f72;
+	margin-left: 20px;
+	z-index: 1000;
+	}
+.oder_cont{
+	margin-left:145px;
+	overflow:hidden;
+	}	
+.oder_cont span{
+	float:left;
+	}	
+.order_tab{
+	float:left;
+	padding:0px 0px;
+	}	
+.tab_cont{
+	float:left;
+	width:355px;
+	border:1px solid #dbdada;
+	background:#fff;
+	margin-right:1px;
+	margin-left:1px;
+	cursor:pointer;
+	}	
+.tab_cont table{
+	font:12px "宋体";
+	color:#7f7f7f;;
+	}	
+.tab_cont table tr td{
+	padding:0 10px;
+	}
+.tab_cont table tr td i{
+	float:left;
+	}		
+.tab_cont table tr td b{
+	float:right;
+	}
+.order_more{
+	font:12px "宋体";
+	color:#7f7f7f;
+	line-height:64px;
+	padding:0 10px;
+	}		
+
+	

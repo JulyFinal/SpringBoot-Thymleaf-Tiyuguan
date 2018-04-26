@@ -1,0 +1,571 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+Buly
+2014-09-22
+联通内部商城-差旅单
+*/
+.body{
+	min-width:967px;
+}
+#topbox{
+	height:25px;
+	border-bottom:1px solid #ececec;
+	background-color:#fafafa;
+	padding:0 20px;
+	}
+.welcome_p{
+	float:left;
+	font:12px "宋体";
+	color:#999;
+	line-height:25px;
+	padding-left: 19px;
+	background: url(../../../resource/images/login/xx_bg.gif) no-repeat left 3px;
+	letter-spacing: 1px;
+	}
+#heardbox{
+	height:95px;
+	}
+.herad_center{
+	height:95px;
+	margin:0 auto;
+	background:url(../../../resource/businessTravel/images/heard-back.gif) no-repeat 801px center;
+	}
+.clv_logo{
+	float:left;
+	margin-top:24px;
+	margin-left:20px
+	}
+.clv_name{
+	float:left;
+	margin:40px 0 0 10px;
+	font:20px "微软雅黑";
+	color:#333;
+	}
+#navbox{
+	background-color:#419fff;
+	}
+.nav_center{
+	
+	height:35px;
+	margin:0 auto;
+	}
+#clv_center{
+	overflow:hidden;
+	margin-left:10px;
+	}
+.left_content{
+	float:left;
+	width:80%;
+	}
+.left_content_dqhj{
+	line-height:3em;
+}
+.shengq_info{
+	border:1px solid #dcedff;
+	}
+.shengq_info h1{
+	height:41px;
+	font:20px "微软雅黑";
+	color:#333;
+	line-height:41px;
+	padding-left:10px;
+	border-bottom:1px solid #dcedff;
+	background-color:#edf4fb;
+	}
+.shengq_info h1 span{
+	font:17px "微软雅黑";
+	color:#333;
+	}	
+.shengq_info_content{
+	padding:12px;
+	}
+.shengq_info_table{
+	padding:10px 0;
+	border:1px solid #cfe6fd;
+	background-color:#f3f8fd;
+	}
+.shengq_info_table tr td{
+	font:12px "宋体";
+	line-height:20px;
+	}
+.shengq_info_table tr td input{
+	width:256px;
+	height:28px;
+	font:12px "宋体";
+	line-height:28px;
+	padding-left:10px;
+	border:1px solid #dedede;
+	
+	}
+.shengq_info_table tr select{
+	width:268px;
+	height:28px;
+	font:12px "宋体";
+	padding-left:10px;
+	border:1px solid #dedede;
+}
+.shengq_info_table tr textarea{
+	font:12px "宋体";
+	border:1px solid #dedede;
+
+	}
+.jp_infobox{
+	margin-top:25px;
+	border:1px solid #40a4fc;
+	border-top:3px solid #40a4fc;
+	}
+.jp_title{
+	height:35px;
+	background-color:#edf4fb;
+	padding:0 15px;
+	}
+.jp_title h1{
+	float:left;
+	font:20px "微软雅黑";
+	color:#333;
+	line-height:35px;
+	}
+.jp_title a{
+	float:right;
+	width:103px;
+	height:31px;
+	font:17px "微软雅黑";
+	color:#fff;
+	line-height:31px;
+	margin-top:4px;
+	text-align:center;
+	border:1px solid #f5a74a;
+	background-color:#fdc03c;
+	}
+.jpinfo_conent{
+	overflow:hidden;
+	padding:13px 13px;
+	}
+.jdinfo_conent{
+	overflow:hidden;
+	padding:0px 13px;
+	}
+.dingd_info{
+	overflow:hidden;
+	height:96px;
+	border:1px solid #f9cb83;
+	background-color:#fcf8eb;
+	}
+.dingd_info_left{
+	float:left;
+	width:577px;
+	height:96px;
+	border-right:1px solid #f9cb83;
+	}
+.dingd_info_left table{
+	font:12px "宋体";
+	line-height:20px;
+	}
+.dingd_info_right{
+	float:left;
+	width:270px;
+	height:96px;
+	}
+.dingd_info_right table{
+	font:12px "宋体";
+	color:#999;
+	line-height:20px;
+	}
+.dingd_info_right table tr td{
+	padding-left:10px;
+	}
+.yud_title,.grbzxx_title{
+	height:33px;
+	padding-left:48px;
+	margin-top:15px;
+	border:1px solid #e3edf6;
+	background:url(../../../resource/businessTravel/images/zxyd_tb.gif) no-repeat 10px center;
+	background-color:#f6fafd;
+	}
+.yud_title h2,.grbzxx_title h2{
+	float:left;
+	font:17px "微软雅黑";
+	line-height:33px;
+	color:#0178fa;
+	}	
+.yud_title a,.grbzxx_title a{
+	float:right;
+	height:23px;
+	padding:0 15px;
+	font:bold 12px "宋体";
+	color:#fff;
+	margin:4px 10px 0 0;
+	line-height:23px;
+	background-color:#699fff;
+	}		
+.gr_jpinfo{
+	margin-top:10px;
+	border:1px solid #d6e9f6;
+	}
+.gr_jdinfo{
+	margin-top:10px;
+	border:0px solid #d6e9f6;
+	}
+.gr_jpinfo_title{
+	height:32px;
+	border-bottom:1px solid #d6e9f6;
+	}
+.gr_jpinfo_NO{
+	float:left;
+	height:32px;
+	font:14px Arial, Helvetica, sans-serif;
+	color:#fff; 
+	padding:0 20px 0 3px;
+	background:url(../../../resource/businessTravel/images/gr_jpinfo.png) no-repeat left top;
+	}
+.gr_jpinfo_p{
+	font:15px "微软雅黑";
+	line-height:32px;
+	margin-left:40px;
+	}
+.gr_jpinfo_p_span{
+	font-size:12px;
+}
+.gr_jpinfo_cont{
+	height:65px;
+	padding:6px 0;
+	background-color:#eff6fc;
+	}
+.gr_jdinfo_cont {
+    background-color: #eff6fc;
+    height: 75px;
+    padding: 0;
+    margin-bottom : 10px;
+    border:1px solid #d6e6f5;
+}
+.gr_jdinfo_NO{
+	width:2%;
+	float:left;
+	height:75px;
+	font:14px Arial, Helvetica, sans-serif;
+	color:#fff; 
+	padding:0 22px 0 3px;
+	background:url(../../../resource/businessTravel/images/gr_jpinfo.png) no-repeat left top;
+	}
+.gr_jdinfo_table{
+	width:725px;
+	float:left;
+	height:75px;
+	font:14px Arial, Helvetica, sans-serif;
+	}
+.gr_jdinfo_table1{
+	float:left;
+	height:75px;
+	font:14px Arial, Helvetica, sans-serif;
+	}
+.qita_table{
+	font:12px "宋体";
+	}
+.qita_table_title{
+	font:bold 12px "宋体";
+	color:#73a5fc;
+	}		
+.qita_jg_font{
+	font:14px Arial, Helvetica, sans-serif;
+	color:#f79436;
+	}	
+.gr_name{
+	font:12px "宋体";
+	color:#333;
+	}
+.jdgr_name{
+	font:14px "宋体";
+	color:#333;
+	}
+.jp_riqi_name{
+	font:17px "微软雅黑";
+	padding-left:10px;
+	}
+.jd_riqi_name{
+	font:13px "宋体";
+	padding-left:10px;
+	}
+.jp_border{
+	border-right:1px solid #d6e9f6;
+	}
+.jp_time_name{
+	font:bold 22px Arial, Helvetica, sans-serif;
+	}
+.jp_gs_name{
+	font:bold 14px "宋体";
+	letter-spacing:1px;
+	}
+.jp_gn_btn{
+	display:block;
+	font:12px "宋体";
+	color:#60b5f7;
+	line-height:21px;
+	}
+.jd_gn_btn{
+	display:block;
+	font:12px "宋体";
+	color:#60b5f7;
+	line-height:25px;
+	}
+#shenp_box{
+	height:205px;
+	border:1px solid #d6e9f6;
+	border-top:3px solid #d6e9f6;
+	overflow:hidden;
+	margin-top:28px;
+	}
+.shenp_left{
+	float:left;
+	width:403px;
+	height:205px;
+	padding-right:1px;
+	background:url(../../../resource/businessTravel/images/shenp_back.png) no-repeat right top;
+	}
+.shenp_left_title{
+	height:38px;
+	font:17px "微软雅黑";
+	color:#098ef4;
+	line-height:38px;
+	padding-left:15px;
+	background-color:#f4f9fd;
+	margin-bottom:5px;
+	}
+.shenp_left_cont{
+	padding:0 15px;
+	}
+.shenp_left_cont table{
+	font:12px "宋体";
+	line-height:20px;
+	}
+.shenp_left_cont_input{
+	width:282px;
+	height:120px;
+	border:1px solid #e1e1e1;
+	}
+.shenp_right{
+	float:left;
+	width:387px;
+	height:205px;
+	}
+.shenp_right table tr td p{
+	font:12px "宋体";
+	color:666464;
+	line-height:23px;
+	}
+.shenp_right_listxux{
+	border-bottom:1px dotted #d1d1d1;
+	}
+#qita_box{
+	border:1px solid #d6e9f6;
+	border-top:3px solid #d6e9f6;
+	overflow:hideen;
+	margin-top:30px;
+	}
+#qita_box table{
+	font:12px "宋体";
+	line-height:20px;
+	background-color:#f3f9fe;
+	}
+#qita_box table tr td input{
+	width:232px;
+	height:28px;
+	border:1px solid #d7ebfc;
+	}
+#lis_box{
+	margin-top:30px;
+	}
+.lis_title{
+	height:30px;
+	padding:0 15px;
+	border-bottom:3px solid #e5e3e4;
+	}
+.lis_title h1{
+	float:left;
+	font:17px "微软雅黑";
+	line-height:30px;
+	}
+.lis_title a{
+	float:right;
+	font:12px "宋体";
+	color:#333;
+	line-height:30px;
+	padding-right:20px;
+	background:url(../../../resource/businessTravel/images/lis_title_jt.png) no-repeat right center
+	}
+.lis_content{
+	padding-top:10px;
+	}
+.lis_content p{
+	padding-left:43px;
+	background:url(../../../resource/businessTravel/images/shenp_jt.png) no-repeat 20px center;
+	}
+.lis_content p span{
+	font:12px "宋体";
+	color:#333;
+	line-height:30px;
+	padding-right:30px;
+	}	
+.right_menus{
+	float:left;
+	width:180px;
+	left:15px;
+	position:relative;
+	top:36px;
+}
+.right_menus a{
+	display:block;
+	height:38px;
+	font:17px "微软雅黑";
+	color:#41b1ff;
+	line-height:38px;
+	text-align:left;
+	margin-bottom:10px;
+	padding-left:54px;
+	border:1px solid #97cbff;
+	}	
+#copyright{
+	width:100%;
+	height:145px;
+	margin:0 auto;
+	margin-top:30px;
+	text-align:center;
+	
+	}
+#copyright .copy_color{
+	height:30px;
+	background-color:#41a0ff
+	}
+.ft-logo{
+	margin:30px 0px 10px 0px;
+	text-align:center;
+}
+
+/*费用情况*/
+.fy_cont{
+	overflow:hidden;
+	padding:5px;
+	}
+.fy_box{
+	float:left;
+	width:370px;
+	margin-left:15px;
+	}
+.fy_box h2{
+	font:bold 14px "宋体";
+	color:#006bfe;
+	line-height:29px;
+	}
+.fy_box_tab{
+	border:1px solid #ccdbfc;
+	border-top:3px solid #ccdbfc;
+	}
+.fy_table{
+	font:12px "宋体";
+	line-height:21px;
+	}
+.fy_table_title{
+	font:bold 12px "宋体";
+	color:#4b4c4e;
+	text-align:center;
+	}
+.gr_jpinfo_cont{
+	height:65px;
+	padding:6px 0;
+	background-color:#eff6fc;
+}
+.grbzxx_jpinfo{
+	margin:10px auto;
+}
+.grbzxx_jpinfo table{
+	width:720px;
+}
+.grbzxx_jpinfo_cont{
+	height:65px;
+	background-color:#eff6fc;
+	border:1px solid #d6e9f6;
+}
+.grbzxx_rmb{
+	font: 14px Arial, Helvetica, sans-serif;
+	color:#f79436;
+	fight:bold;
+	text-align: left;
+	padding-left:10px;
+}
+.grbzxx_rmb span{
+	font: 16px Arial, Helvetica, sans-serif;
+}
+.xcxx_jpinfo{
+	margin:10px auto;
+}
+
+.xcxx_jpinfo_cont{
+	border:1px solid #E6E6E6;
+}
+.xcxx_jpinfo_cont table th{
+	background-color:#F9F9F9;
+	height:26px;
+	line-height:26px;
+	font-weight:bold;
+	text-align:center;
+}
+.xcxx_jpinfo_cont table tr{
+	border-top:1px solid #F3F3F3;
+	line-height:3em;
+	height:3em;
+}
+.xcxx_jpinfo_cont table td{
+	text-align:center;
+}
+.xcxx_jpinfo_cont table td a{
+	color:#0177FD;
+}
+.scxx_jt{
+	background: url(../../../resource/businessTravel/images/xiao_jiantou.png) no-repeat center;
+	width:59px;
+	height:6px;
+}
+.index_orderLog{
+	margin:10px auto;
+	border:1px solid #E6E6E6;
+}
+.index_orderLog th{
+	background-color:#F9F9F9;
+	height:26px;
+	line-height:26px;
+	font-weight:bold;
+	text-align:center;
+}
+.index_orderLog tr{
+	border-top:1px solid #F3F3F3;
+	height:3em;
+	text-align:center;
+}
+.red_star{
+	color:red;
+	margin-right:5px;
+}
+.isSpecial_0{
+	
+}
+.isSpecial_0{
+	float:left;
+	margin-right:12px;
+	text-align:center;
+	cursor: pointer;
+	width:56px;
+	height:29px;
+	line-height:31px;
+}
+.isSpecial_NO{
+	background: url(../../../resource/businessTravel/images/tb_link.gif) no-repeat center;
+}
+.isSpecial_OK{
+	background: url(../../../resource/businessTravel/images/tb_hover.gif) no-repeat center;
+}
+@media print{
+　　.noprint{
+　　display:none
+　　}
+}

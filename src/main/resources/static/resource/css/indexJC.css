@@ -1,0 +1,68 @@
+@charset "utf-8";
+h1,h2,h3,h4,h5,h6,p,ul,li,dl,dd,dt,ol,form,table,body,input{margin:0;padding:0;}
+
+.dianpu{
+    float:left;
+	width:216px;
+	border:1px solid #dfdfdf;
+	border-bottom:2px solid #dfdfdf;
+	padding: 1px 1px;
+	margin-bottom:6px;
+}
+.dianpu h1{
+	height:31px; 
+	font:bold 14px/31px "宋体";
+	color:#000;
+	letter-spacing:2px;
+	background:url(../images/front/h1_bg1.gif) repeat-x left;
+	margin-bottom:0px;
+}
+/*联系方式样式*/
+.lxfs{margin-bottom:6px;}
+.lxfs a{
+    float:left;
+	width:69px;
+	margin-left:5px;
+	_margin-left:1px;
+	margin-bottom:2px;
+	height:25px;
+	color:#cc6c31;
+	position:relative;
+	z-index:999;
+	text-decoration:none;
+	}
+.lxfs a span{
+	float:left;
+	width:50px;
+	height:16px;
+	background:url(../images/front/lxfs_img.gif) no-repeat;
+	padding-left:22px;
+	padding-top:9px;
+	line-height:13px;
+	color:#cc6c31;
+	font: 12px/15px "宋体";
+	}
+.tck{
+	position:absolute;
+	width:146px;
+	height:120px;
+	padding-top:13px;
+	left:-5px;
+	top: 25px;
+	z-index:9999;
+	background:url(../images/front/tck_top.png) no-repeat top;
+	display:none;
+	text-align:left;
+}
+.tck ul{}
+.tck1{ 
+    background:url(../images/front/tck_top1.png) no-repeat top;
+	position:absolute;
+	left:-117px;
+	z-index:9999;
+	}
+.lxfs a:hover{border:none;background:none;text-decoration:none;cursor:pointer}
+.lxfs a:hover .tck{ display:block;}
+.tck ul{ float:left;background:url(../images/front/tck_bottom.png) no-repeat bottom; padding:0 0 9px 0;word-break:break-all;}
+.tck ul li{float:left;width:134px;font:12px/21px "宋体";color:#333;line-height:20px;background:url(../images/front/tck_center.png) repeat-y top; padding-left:6px;padding-right:6px;word-break:break-all;}
+

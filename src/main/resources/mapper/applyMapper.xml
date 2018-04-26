@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="org.jf.dao.ApplyDao">
+	<select id="getList" resultType="Apply">
+		SELECT * FROM t_apply
+	</select>
+	<!-- 根据ID查找 -->
+	<select id="getByid" parameterType="String" resultType="Apply">
+		SELECT
+		*FROM t_apply 
+		WHERE id=#{0}
+	</select>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="Apply" useGeneratedKeys="true"
+		keyProperty="id">
+		INSERT INTO t_apply(name,chewei,starttime,endtime,uid,cid,tel,state)
+		VALUES(#{name},#{chewei},#{starttime},#{endtime},#{uid},#{cid},#{tel},#{state})
+	</insert>
+	<!-- 资料修改 -->
+	<update id="update" parameterType="Apply">
+		UPDATE t_apply SET
+		name=#{name},chewei=#{chewei},starttime=#{starttime},endtime=#{endtime},uid=#{uid},cid=#{cid},tel=#{tel},time=#{time},state=#{state}
+		WHERE id=#{id}
+	</update>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="int">
+		DELETE FROM t_apply WHERE
+		id=#{id}
+	</delete>
+	
+	<select id="getForIndex" resultType="Notice">
+		SELECT
+		*FROM t_apply ORDER BY time desc LIMIT 0,4
+	</select>
+	
+		<!-- 根据ID查找 -->
+	<select id="checkExist" parameterType="Apply" resultType="Apply">
+		SELECT
+		*FROM t_apply 
+		WHERE time=#{time}
+		AND date=#{date}
+		AND state='确认'
+	</select>
+	
+	<select id="getByUid" parameterType="String" resultType="Apply">
+		SELECT
+		*FROM t_apply WHERE uid=#{0}
+	</select>
+	
+	<!-- 我的申请 -->
+	<select id="getMyList"  parameterType="String"  resultType="Apply">
+		SELECT * FROM t_apply WHERE uid=#{uid}
+	</select>
+	<!-- 已确认 -->
+	<select id="getConfirmedList" resultType="Apply">
+		SELECT * FROM t_apply WHERE state='确认'
+	</select>
+	<!-- 申请中 -->
+	<select id="getNeedList" resultType="Apply">
+		SELECT * FROM t_apply WHERE state='申请中'
+	</select>
+</mapper>

@@ -1,0 +1,127 @@
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,section,article,aside,header,footer,nav,dialog,figure,hgroup{margin:0;padding:0;}
+table {border-collapse:collapse;border-spacing:0}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+ul,ol,li{list-style:none}
+em,i{font-style:normal}
+img{border:0;}
+input,img{vertical-align:middle;}
+input:focus{outline:none;}
+a{color:#333;text-decoration:none;}
+*{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+html{font-size:12px;}
+/* Site Global */
+body{min-width:320px;line-height:1.5;color:#333;font-family: "微软雅黑","Helvetica Neue", Helvetica, STHeiTi, sans-serif;}
+.w{width:320px !important;margin:0 auto;}
+.layout{margin:10px;-webkit-box-sizing:border-box;}
+.pdlayout{padding:10px;}
+.fix:after{display:block; content:''; clear:both; visibility:hidden;}
+.cl{clear:both;}
+.fl{float:left}
+.fr{float:right;}
+.block{display:block !important;}
+.db{display:block;}
+.dib{display:inline-block;}
+.hide{display:none}
+.ml20{margin-left:20px !important;}
+.ml10{margin-left:10px !important;}
+.ml15{margin-left:15px !important;}
+.ml5{margin-left:5px !important;}
+.mt20{margin-top:20px !important;}
+.mt10{margin-top:10px !important;}
+.mt15{margin-top:15px !important;}
+.mtb10{margin:10px 0 !important;}
+.mt5{margin-top:5px !important;}
+.mr10{margin-right:10px !important;}
+.pt5{padding-top:5px !important;}
+.pt10{padding-top:10px !important;}
+.pt15{padding-top:15px !important;}
+.pt20{padding-top:20px !important;}
+.pb5{padding-bottom:5px !important;}
+.pb10{padding-bottom:10px !important;}
+.pb15{padding-bottom:15px !important;}
+.pb20{padding-bottom:20px !important;}
+.ti10{text-indent:10px;}
+.tr{text-align:right;}
+.tc{text-align:center;}
+.f12{font-size:1rem !important;}
+.f14{font-size:1.16rem !important;}
+.f15{font-size:1.25rem !important;}
+.f16{font-size:1.33rem !important;}
+.f20{font-size:1.66rem !important;}
+.pa{position: absolute;}
+.pr{position:relative;}
+.gray{color:#707070;}
+.gray6{color:#666;}
+.gray9{color:#999;}
+.redc{color:#c00;}
+.disable{background-color: #999 !important;}
+.vm{position:absolute;top:50%;-webkit-transform: translateY(-50%);}
+.bold{font-weight:700;}
+.of{overflow:hidden;word-wrap:break-word;word-break:break-all;white-space:nowrap;text-overflow:ellipsis;}
+.wb{word-wrap:break-word;word-break:break-all;text-overflow:ellipsis;}
+.snPrice{color:#d00;}
+.snPrice em{padding-left:2px;}
+img.liprice{height:20px !important;width:auto !important;}
+.p{margin:5px 0;}
+.overtouch{overflow-y:auto;-webkit-overflow-scrolling:touch;}
+.v-middle{vertical-align:middle;}
+.border-1px{border-width:0 1px;-webkit-border-image:url(data:image/x-png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQY02M8c+bMfwZiADEKz5w585+JgUgwMhUyEhvgAC1HDZ2yirhtAAAAAElFTkSuQmCC) 2 round stretch;}
+.of {
+overflow: hidden;
+word-wrap: break-word;
+word-break: break-all;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+/* layout */
+.wbox{display:-webkit-box;}
+.wbox-flex{-webkit-box-flex:1 !important;word-wrap:break-word;word-break:break-all;}
+.bbox{-webkit-box-sizing:border-box;}
+.top-fixed {position: fixed;top: 0;left: 0;width: 100%;/*border-bottom: 1px solid #DCDCDC;*/z-index: 50;height: 42px;line-height: 42px;background: #C00;padding: 0;color: #FFF;font-size: 16px;text-align: center;font-weight: bold;
+}
+.bottom-fixed {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-top: 1px solid #DCDCDC;
+	background: #FFF;
+	padding: 10px;
+	z-index: 50;
+}
+.eshop-block{background-color:#fff !important;}
+/* title 
+* nav-title */
+.eshop-nav{position:relative;height:45px;background:#C00;line-height:44px;/*border-bottom:1px solid #FFF*/;font-size:1.25rem;}
+.eshop-nav-title{width:60%;margin:0 auto;text-align:center;font-size:16px;color:#fff;}
+.eshop-nav-back,.eshop-nav-list{margin:0 10px;position:absolute;width:19%;top:0;}
+.eshop-nav-back a,.eshop-nav-list a{position:absolute;top:0;display: block;}
+.eshop-nav-back{position:absolute;left:10px;top:15px;border:2px solid #FFF;border-width:2px 0 0 2px;-webkit-transform:rotate(-45deg);width:12px;height:12px;}
+.eshop-nav-back a{width:12px;height:12px;text-indent:-100rem;overflow:hidden;}
+.eshop-nav-list{right:0;height:45px;overflow:hidden;}
+.eshop-nav-list a{position:absolute;right:0;}
+.eshop-nav-left{position:absolute;left:0;top:0;height:45px;width:19%;}
+
+.eshop-nav-left .cate-all{position:absolute;left:15px;top:14px;width:18px;height:19px;background:url(images/main.png) no-repeat -4px -6px;background-size:6.1em;}
+.eshop-nav-right{position:absolute;right:0;top:0;height:45px;width:19%;}
+.eshop-nav-right .my-account{position:absolute;right:56px;top:14px;width:22px;height:23px;background:url(images/main.png) no-repeat -40px -6px;background-size:6.6em;}
+.eshop-nav-right .my-home{position:absolute;right:15px;top:9px;width:25px;height:25px;background:url(../images/icon-home.png) no-repeat 0 0;background-size:contain;}
+.eshop-nav-right .quick-icon{position:absolute;top:8px;right:20px;height:6px;width:6px;background:#656B70;border-radius:6px;}
+.eshop-nav-right .quick-icon:after{content:"";position:absolute;top:9px;height:6px;width:6px;background:#656B70;border-radius:6px;}
+.eshop-nav-right .quick-icon:before{content:"";position:absolute;bottom:-18px;height:6px;width:6px;background:#656B70;border-radius:8px;}
+.eshop-nav-right .my-cart{position:absolute;right:15px;top:14px;width:24px;height:22px;background:url(images/main.png) no-repeat -80px -6px;}
+.eshop-nav-right .my-cart.my-cart-in{background:url(images/main.png) no-repeat -72px -6px;background-size:6.6em;}
+.eshop-nav-right .my-cart.my-cart-in .count{position:absolute;right:-5px;top:-5px;width:13px;height:13px;background:#fc6e51;color:#999;border-radius:15px;text-align:center;line-height:13px;color:#fff;}
+.eshop-nav-right .my-cart.my-cart-in .count em{display:block;text-align:center;-webkit-transform: scale(0.6);font-size:13px;}
+.eshop-nav-right .my-cart.my-cart-in .count em.count-em{margin-left:-3px;}
+.eshop-nav-right .my-cart.my-cart-in .count em.count-em i{position:absolute;right:-5px;top:-5px;}
+
+.new-tbl-type {display: table;width: 100%;}
+.new-tbl-cell {display: table-cell;}
+
+/*库存头色值*/
+.head-stock{
+    background-color: #0090ff!important;
+    border-color: #0090ff!important;
+}

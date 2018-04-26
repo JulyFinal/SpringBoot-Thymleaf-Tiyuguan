@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jf.dao.ReplyDao">
+	<select id="getForPage" resultType="Reply">
+		SELECT * from t_reply
+	</select>
+	
+	
+		<select id="getAll" resultType="Reply">
+		SELECT * from t_reply
+	</select>
+	<!-- 根据ID查找 -->
+	<select id="getByid" parameterType="String" resultType="Reply">
+		SELECT
+		*FROM t_reply WHERE id=#{0}
+	</select>
+		
+	<select id="getByRootd" parameterType="String" resultType="Reply">
+		SELECT
+		*FROM t_reply WHERE root=#{0}
+	</select>
+	
+	<select id="getByparentid" parameterType="String" resultType="Reply">
+		SELECT
+		*FROM t_reply WHERE parentid=#{0}
+	</select>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="Reply" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into t_reply(message,time ,parentid,name,root,uid)
+		values(#{message},#{time}, #{parentid},#{name},#{root},#{uid})
+	</insert>
+	<!-- 资料修改 -->
+	<update id="update" parameterType="Reply">
+		update t_reply set
+		name=#{name},uid=#{uid}, parentid=#{parentid},time=#{time},root=#{root},message=#{message}
+		where id=#{id}
+	</update>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="int">
+		delete from t_reply where
+		id=#{id}
+	</delete>
+	
+</mapper>

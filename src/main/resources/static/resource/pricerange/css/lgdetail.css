@@ -1,0 +1,105 @@
+@charset "utf-8";
+.pricetotalnum {
+    position:relative;
+    left:0px;
+    top:5px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+    _width:115px;
+}
+.price_sellprice_span{
+    position:relative;
+    left:0px;
+    top:25px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+    _width:115px;
+}
+.price_range_out_div{
+	position:relative;
+	float:left;
+	overflow: hidden;
+	height: 66px;
+	margin-top:10px;
+}
+.price_range_out_div_current{
+	position:relative;
+	float:left;
+	overflow: hidden;
+	height: 76px;
+}
+.price_sellprice_range{
+	
+    width:86px;
+    _width:85px;
+    height:56px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+    border:1px solid #C9C9C9;
+    background-color: #F0F0F0;
+}
+.price_sellprice_range .span1{
+    position:absolute;
+    left:0px;
+    top:5px;
+    width:86px;
+    _width:85px;
+    height:16px;
+    text-align:left;
+    word-wrap:break-word;
+    color:#666666;
+    font-size:11px;
+}
+.price_sellprice_range .span2{
+    position:absolute;
+    left:0px;
+    top:35px;
+    width:86px;
+    _width:85px;
+    height:16px;
+    text-align:left;
+    word-wrap:break-word;
+    color:#666666;
+    font-size:16px;
+}
+.price_sellprice_range_current{
+    width:100px;
+    _width:95px;
+    height:76px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+    border:1px solid #C9C9C9;
+    background-color: #CC0001;
+}
+.price_sellprice_range_current .span1{
+    position:absolute;
+    left:0px;
+    top:10px;
+    width:100px;
+    _width:95px;
+    height:16px;
+    text-align:left;
+    word-wrap:break-word;
+    color:#ffffff;
+    font-size:11px;
+}
+.price_sellprice_range_current .span2{
+    position:absolute;
+    left:0px;
+    top:50px;
+    width:100px;
+    _width:95px;;
+    height:16px;
+    text-align:left;
+    word-wrap:break-word;
+    color:#ffffff;
+    font-size:18px;
+}
+
+	

@@ -1,0 +1,16 @@
+ul, ol{list-style:none;margin:0px;padding:0px;}
+/* li{list-style:none outside none;} */
+/*首页*/
+div.indexmaindiv{height:160px;margin:0px auto;top:10px;}
+/*滚动*/
+div.maindiv1{float:left;width:674px;height:146px;border:1px solid #ccc;border-left:0px;border-right:0px;overflow:hidden;position:relative;top:10px;}
+div.maindiv1 ul{position:absolute;left:0;top:0;}
+div.maindiv1 ul li{width:172px;float:left;}
+div.indexmaindiv1 div.leftDiv{float:left;border:0px solid #ccc;border-left:0px;border-right:0px;width:21px;height:146px;margin:10px 0px 0px 0px;}
+div.indexmaindiv1 div.selectLeftDiv{float:left;border:1px solid #ccc;background:#F9F9F9;width:21px;height:146px;margin:10px 0px 0px 0px;top:10px;}
+div.indexmaindiv1 div.stylesgoleft{float:left;width:21px;height:100%;background:url('../../images/tj_left.gif') no-repeat;margin:-20px 0px 0px 0px;cursor:pointer;}
+div.indexmaindiv1 div.selectStylesgoleft{float:left;width:21px;height:36px;background:url('../../images/arrow.png') no-repeat;margin:58px 0px 0px 0px;cursor:pointer;} 
+div.indexmaindiv1 div.rightDiv{float:left;border:0px solid #ccc;border-left:0px;border-right:0px;width:21px;height:146px;margin:10px 0px 0px 0px;}
+div.indexmaindiv1 div.selectRightDiv{float:left;border:1px solid #ccc;background:#F9F9F9;width:21px;height:146px;margin:10px 0px 0px 0px;}
+div.indexmaindiv1 div.stylesgoright{float:left;width:21px;height:200px;background:url('../../images/tj_right.gif') no-repeat;margin:-20px 0px 0px 0px;cursor:pointer;}
+div.indexmaindiv1 div.selectStylesgoright{float:left;width:21px;height:36px;background:url('../../images/arrowright.png') no-repeat;margin:58px 0px 0px 0px;cursor:pointer;}

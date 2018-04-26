@@ -1,0 +1,94 @@
+/*�����б�table��ʽ���������*/
+.oaAttachList{
+	font-size:12px;
+	font-family:"����";
+	
+	border:1px solid #FFCC66; 
+	background-color:#FFFFD9
+}
+.attachListLogo{
+	background-image:url(../images/bid/top.gif);
+	background-repeat:no-repeat;
+	width:15px;
+	height:18px;
+	float:left;
+		
+}
+
+/*Сͼ�����ڵ�span*/
+.attachItemLogo{
+	background-image:url(../images/bid/fujian.gif);
+	background-repeat:no-repeat;
+	width:15px;
+	height:18px;
+	float:left;
+	margin-right:8px;	/*�����ֵľ���*/		
+}
+
+.oaAttachList a{
+	font-size:12px;
+	font-family:"����";
+	text-decoration:none;
+}
+
+
+.attachTitle{
+	font-size:12px;
+	font-family:"����";
+	color:#3974A8;
+}
+.btAttachHtmlAdd{
+	background-image:url(../images/bid/add.png); 
+	background-repeat:repeat-x;width:52px; 
+	height:21px; 
+	border:0px solid #999999;
+	margin:0 3px 0 3px;
+	cursor:hand;
+}
+
+.btAttachHtmlDel{
+	background-image:url(../images/bid/del.png); 
+	background-repeat:repeat-x;width:52px; 
+	height:21px; 
+	border:0px solid #999999;
+	margin:0 3px 0 3px;
+	cursor:hand;
+}
+
+
+.btAttachHtmlEdit{
+	background-image:url(../images/bid/edit.png); 
+	background-repeat:repeat-x;width:52px; 
+	height:21px; 
+	border:0px solid #999999;
+	margin:0 3px 0 3px;
+	cursor:hand;
+}
+
+
+.btAttachHtmlSaveas{
+	background-image:url(../images/bid/saveas.png); 
+	background-repeat:repeat-x;width:52px; 
+	height:21px; 
+	border:0px solid #999999;
+	margin:0 3px 0 3px;
+	cursor:hand;
+}
+
+
+.downdot {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: dotted;
+	border-right-style: dotted;
+	border-bottom-style: dotted;
+	border-left-style: dotted;
+	border-top-color: #8DAFFE;
+	border-right-color: black;
+	border-bottom-color: #666666;
+	border-left-color: black;
+}
+
+

@@ -1,0 +1,94 @@
+/**
+ * jquery.selectbox-mobile Css
+ *
+ * @package		init
+ * @author		hom
+ * @copyright	Copyright (C) KICKcreative Co., All Rights Reserved.
+ * @license		dev 1.0
+ * @link		http://www.site.com
+ * 
+ **/
+ 
+/*
+	init
+*/
+
+.selectbox-mobile-wrap {
+	width: 100% !important;
+	position: relative;
+	background: #fff;
+	border: solid 1px #e7e4dd;
+	font-family: Arial, Helvetica, '微軟正黑體', sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	outline: none;
+	display: inline-block;
+	*display: inline; /*IE7*/
+	*zoom: 1; /*IE7*/
+	_display: inline; /*IE6*/
+	_zoom: 1; /*IE6*/
+	vertical-align: middle;
+}
+
+.selectbox-mobile-wrap.active {
+	-moz-box-shadow: 0px 5px 15px rgba(233, 230, 223, 0.7) inset;
+    -webkit-box-shadow: 0px 5px 15px rgba(233, 230, 223, 0.7) inset;
+	-o-box-shadow: 0px 5px 15px rgba(233, 230, 223, 0.7) inset;
+    box-shadow: 0px 5px 15px rgba(233, 230, 223, 0.7) inset;
+}
+
+.selectbox-mobile-wrap select {
+	cursor: pointer;
+	-webkit-appearance: none;
+	/* IE 8 */
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	/* IE 5-7 */
+	filter: alpha(opacity=0);
+	/* Netscape */
+	-moz-opacity: 0;
+	/* Safari 1.x */
+	-khtml-opacity: 0;
+	/* Good browsers */
+	opacity: 0;
+	border: none;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.selectbox-mobile-wrap .handle {
+	padding: 6px 10px;
+	padding-right: 27px;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+.selectbox-mobile-wrap .arrow {
+	position: absolute;
+	top: 50%; right: 0;
+	width: 27px;
+	height: 27px;
+	margin-top: -14px;
+	background: center -6px no-repeat;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAACgCAYAAAEJGh5OAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjM4M0VGNjIzRjhGNzExRTE4NDEzOUNGMkY5M0YwMUM3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjM4M0VGNjI0RjhGNzExRTE4NDEzOUNGMkY5M0YwMUM3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzgzRUY2MjFGOEY3MTFFMTg0MTM5Q0YyRjkzRjAxQzciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MzgzRUY2MjJGOEY3MTFFMTg0MTM5Q0YyRjkzRjAxQzciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7onu42AAACe0lEQVR42mL8//8/AzpgYsACRgUHShAggBhH42jQCwIEENY4Ilo3UQpnzpwJwv8HwGraKAwI8BsenhmNGbKsBgigIRs8xCaKb0CsMrJ8PRQUAlP3NyAejZnBmGc+ALHxaMwMwjzzAYiHZMwABBDRbqS6zcPHQBZCCoDZ9jCQsoHx09PTGSl1oS0o8oC4A0qPxvKogUM/pwCLUZScsmHDJvyJG5SwicH+/r7txKgbzSmjBg6VOgXG7AXiYmCdQrEL54MyFBAXQenROmXUwOFjILBu6aVKkxhoECinJBBbSY3mFMoBQACNhuGogSO2okdO+QuAFX0ipS40gdIfgTiRGl4+C8R9QCwwmpdHDRw1cNTAUQMHc52CNoe5ANiCpV6dQsgwMCByzKaX2PGd0Tpl1MBRA0cNHDVwAPspIKodiCtBDGoMSIKWIVQA8Tdqefk2lOYE4sOj/ZRRA0cNHDVw1MDBbCCwr9JOrIHEDN2rQKuB78B+ChdV6xTo5PVonTJq4KA3ECBA+3ZsgjAQRnG80MYBUukQpnWI8xbQ4XSByw1hq0NolQFsLHwfnBBSaCCHOeV/8IgkID8Twe8Zzf4+LP4VAwQIEOCPAedjn0C9vNLmrCx7hy7KRj39PvUZbJWVsu/s2yq1zWklXeJjuiKWyGcxQIAAAQIECBAgQDrJkOW9e9tJQoijxv5sE7WgO20Or04iWJaxn5EfIECAAAECBAgQIMBJO0nnD9VOadJjuyVh3/p//D3jN87gIpWmprPPuslVqegkAAECBAgQIECAAAEOXd67maVIoGDWSR6WdEsiyxo98gtjneSkrHuHbkodQmzpJAABAgT4x8AnXS5Pr31y/84AAAAASUVORK5CYII=);
+	/*IE7*/
+	*background-image: url(select-icons.png);
+	/*IE6*/
+	_background-image: url(select-icons.png);
+}
+
+.selectbox-mobile-wrap.hover .arrow {
+	background-position:center -46px;
+}
+
+.selectbox-mobile-wrap.active .arrow {
+	background-position:center -86px;
+}
+
+.selectbox-mobile-wrap.hover.active .arrow {
+	background-position:center -126px;
+}

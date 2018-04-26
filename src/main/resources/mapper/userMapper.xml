@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为IUserDao接口方法提供sql语句配置 -->
+<mapper namespace="org.jf.dao.UserDao">
+	<!-- 查询列表 -->
+	<select id="getUserForPage" resultType="User">
+		SELECT * from t_user
+	</select>
+	<select id="getAll" resultType="User">
+		SELECT * from t_user
+	</select>
+	<!-- 查询是否存在 -->
+	<select id="checkExist" parameterType="String" resultType="User">
+		SELECT * from t_user where no=#{0}
+	</select>
+	<!-- 根据ID查找 -->
+	<select id="getByid" parameterType="String" resultType="User">
+		SELECT * FROM t_user WHERE id=#{0}
+	</select>
+	<!-- 登录校验 -->
+	<select id="checkUser"  resultType="User">
+		SELECT * FROM t_user WHERE no=#{no} AND pwd=#{pwd}
+	</select>
+	<!-- 修改密码校验 -->
+	<select id="checkUserEmail" parameterType="String" resultType="User">
+		SELECT *FROM t_user WHERE no=#{0} AND email=#{1}
+	</select>
+	<!-- 修改密码 -->
+	<update id="changeUserPwd" parameterType="User">
+		update t_user set
+		pwd=#{pwd}
+		where id=#{id}
+	</update>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="User" useGeneratedKeys="true"
+			keyProperty="id">
+		insert into t_user(no,pwd,tel,email,name,age,role,birth,address)
+		values(#{no},#{pwd},#{tel},#{email},#{name},#{age},#{role},#{birth},#{address})
+	</insert>
+	<!-- 资料修改 -->
+	<update id="update" parameterType="User">
+		update t_user set
+		pwd=#{pwd},tel=#{tel},email=#{email},name=#{name},age=#{age},birth=#{birth},role=#{role}
+		where id=#{id}
+	</update>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="int">
+		delete from t_user where
+		id=#{id}
+	</delete>
+</mapper>

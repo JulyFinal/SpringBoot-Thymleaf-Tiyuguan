@@ -1,0 +1,270 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+buly
+2016-08-28
+*/
+body{
+	background-color:#f5f5f5;
+	}
+table{
+	font:12px "宋体";
+	color:#333;
+	}	
+/*header*/	
+#header{
+	height:76px;
+	background:url(../images/negotiation/header_bg.png) no-repeat right bottom;
+	background-color:#333;
+	}
+.header_logo{
+	float:left;
+	margin:10px 0 0 10px;
+	}
+/*content*/	
+#content{
+	width:960px;
+	margin:0 auto;
+	}
+
+/*磋商商品*/
+.cs_div{
+	margin-top:20px;
+	}
+.cs_title{
+	height:34px;
+	}
+.cs_title h1{
+	float:left;
+	font:bold 14px "宋体";
+	color:#333;
+	line-height:34px;
+	padding-left:10px;
+	}
+.cs_cont{
+	border:1px solid #eee;
+	border-top:3px solid #89cb61;
+	background-color:#fff;
+	padding-bottom:10px;
+	}
+.cs_cont dl dt{
+	float:left;
+	border:1px solid #dfd9db;
+	}
+.cs_cont dl dd{
+	margin-left:10px;
+	}	
+.cs_cont dl .dl_title{
+	font:bold 15px "微软雅黑";
+	color:#333;
+	line-height:39px;
+	border-bottom:1px solid #e8e8e8;
+	}
+.cs_cont dl .dl_cont{
+	font:12px "宋体";
+	color:#333;
+	line-height:25px;
+	}
+.cs_cont dl .dl_cont span{
+	font:12px "宋体";
+	color:#333;
+	line-height:25px;
+	padding-right:30px;
+	}
+/*基本信息*/
+.div_back{
+	border:1px solid #efefef;
+	background-color:#fff;
+	}
+.jb_cont{
+	padding-bottom:30px;
+	}
+.jb_cont p{
+	padding-bottom:10px;
+	border-bottom:1px solid #f3f2f2;
+	}
+.jb_cont p span{
+	font:12px "宋体";
+	color:#333;
+	line-height:25px;
+	padding:0 30px 0 20px;
+	}
+.time_input{
+	width:158px;
+	height:28px;
+	border:1px solid #C0C0C0;
+	}
+.i_font{
+	font:12px "宋体";
+	color:#f26666;
+	}
+/*收货信息*/
+.sh_cont{
+	padding-bottom:20px;
+	}
+.sh_cont table tr td{
+	padding-left:20px;
+	}
+/*大单磋商说明*/
+.dd_div{
+	height:170px;
+	padding-top:10px;
+	background:url(../images/negotiation/dd_img.png) no-repeat right 15px;
+	}
+.dd_div h2{
+	font:bold 12px "宋体";
+	color:#333;
+	line-height:30px;
+	}
+.dd_div p{
+	font:12px "宋体";
+	color:#333;
+	line-height:25px;
+	}
+/*提交按钮*/
+.btn{
+	width:208px;
+	height:49px;
+	border:none;
+	font:17px "微软雅黑";
+	color:#fff;
+	line-height:49px;
+	text-align:center;
+	background:url(../images/negotiation/butt.png) no-repeat;
+	}
+/*我的报价*/
+.bj_div{
+	height:165px;
+	background:url(../images/bj_bg.png) no-repeat right center;
+	background-color:#fff;
+	}
+.bj_cont{
+	padding:0 20px;
+	}
+.bj_cont p{
+	font:12px "宋体";
+	color:#333;
+	line-height:28px;
+	}
+.bj_cont p span{
+	padding-right:20px;
+	}
+.bj_cont p span i{
+	font:17px "微软雅黑";
+	color:#e34743;
+	}
+/*content_2*/
+#content_2{
+	margin-top:20px;
+	padding:10px 75px;
+	background-color:#fff;
+	}
+.cont_2_tiitle{
+	font:17px "微软雅黑";
+	color:#333;
+	line-height:40px;
+	}
+.cont_2_cent{
+	border-left:1px solid #c4c0c9;
+	border-top:1px solid #c4c0c9;
+	}
+.cont_2_cent table tr td{
+	border-right:1px solid #c4c0c9;
+	border-bottom:1px solid #c4c0c9;
+	}
+.title_bold{
+	font:bold 12px "宋体";
+	color:#727272;
+	}
+
+/*弹出框样式*/
+#cs_tc{
+	width:746px;
+	height:618px;
+	margin:0 auto;
+	background:url(../images/tc_bg.png) no-repeat center 320px;
+	background-color:#fff;
+	}
+.close{
+	overflow:hidden;
+	padding:15px 20px;
+	}
+.close a{
+	float:right;
+	padding:5px 5px;
+	
+	}
+.tc_cont{
+	padding:0 68px;
+	margin:0 0 30px 0;
+	}
+.tc_cont h1{
+	font:bold 20px "微软雅黑";
+	color:#e94641;
+	line-height:40px;
+	}
+.tc_cont .p_font{
+	font:12px "宋体";
+	color:#333;
+	line-height:20px;
+	}
+.tc_cont h2{
+	font:17px "微软雅黑";
+	color:#333;
+	line-height:32px;
+	}
+.tc_cont .p_font1{
+	color:#7a7a7a;
+	}
+.tc_btn{
+	text-align:center;
+	margin-top:150px;
+	}
+.tc_btn .tc_btn_1{
+	width:148px;
+	height:37px;
+	background:url(../images/qcs_btn.png) no-repeat;
+	border:none;
+	font:17px "微软雅黑";
+	color:#fff;
+	line-height:37px;
+	text-align:center;
+	margin:0 20px;
+	}
+.tc_btn .tc_btn_2{
+	background:url(../images/jxxd_btn.png) no-repeat;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

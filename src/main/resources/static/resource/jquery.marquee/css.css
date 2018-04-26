@@ -1,0 +1,24 @@
+.in_f {
+	CLEAR: both; HEIGHT: 46px
+}
+.in_f .a {
+	BACKGROUND: url(../images/i12.gif) no-repeat left 50%; FLOAT: left; WIDTH: 160px; HEIGHT: 46px
+}
+.in_f .b {
+	FLOAT: left; WIDTH: 17px; HEIGHT: 46px
+}
+.in_f .centerBox {
+	DISPLAY: inline; FLOAT: left; MARGIN: 0px 10px; OVERFLOW: hidden; width:498px; HEIGHT: 232px
+}
+.in_f .centerBox IMG {
+	MARGIN: 0px 3px
+}
+.in_f .d {
+	FLOAT: left; WIDTH: 16px; HEIGHT: 46px
+}
+.in_f .b IMG {
+	CURSOR: pointer
+}
+.in_f .d IMG {
+	CURSOR: pointer
+}

@@ -1,0 +1,222 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+buly
+2016-05-25
+*/
+
+#hx_gs{
+	width:920px;
+	height:39px;
+	padding-right:5px;
+	background:url(../images/fj_right.png) no-repeat right top;
+	margin-left:90px;
+	}
+.fj_left{
+	float:left;
+	width:85px;
+	height:55px;
+	background:url(../images/bdw_order.gif) no-repeat left top;
+	}
+.fj_right{
+	float:right;
+	width:55px;
+	height:39px;
+	}
+.fj_center{
+	height:39px;
+	overflow:hidden;
+	background-color:#0055fe;
+	}
+.fj_span_left{
+	float:left;
+	margin-left:10px;
+	}
+.fj_span_right{
+	float:right;
+	}
+.fj_more{
+	float:right;
+	font:12px "宋体";
+	color:#FFF;
+	line-height:39px;
+	padding:0 10px;
+	cursor:pointer;
+	}
+.p_content{
+	width:710px;
+	float:left;
+	font:14px "微软雅黑";
+	color:#fff;
+	line-height:39px;
+	padding:0 10px;
+	}
+/*全集团订单公示*/
+#qjt_div{
+	width: 250px; 
+	height:239px;
+	margin-left:13px;
+	font:12px '宋体';
+	background-color:#f8f8f8;
+	}
+.qjt_tittle{
+	height:27px;
+	padding:0 10px;
+	background-color:#008fff;
+	}
+.qjt_tittle h1{
+	float:left;
+	font:14px "微软雅黑";
+	color:#fff;
+	line-height:27px;
+	}
+.qjt_tittle a{
+	float:right;
+	font:12px "宋体";
+	color:#fff;
+	line-height:27px;
+	}
+.info_je{
+	height:33px;
+	text-align:right;
+	border-bottom:1px solid #ececec;
+	}
+.info_je .name{
+	float:left;
+	line-height:33px;
+	padding:0 10px;
+	border-right:1px solid #ececec;
+	}
+.info_je .zje{
+	float:right;
+	line-height:33px;
+	padding:0 10px;
+	border-right:1px solid #ececec;
+	}
+.info_je .zje i{
+	color:#f74f4f;
+	}
+.bm_info{
+	height:32px;
+	line-height:32px;
+	padding:0 10px;
+	border-bottom:1px solid #ececec;
+	}
+.dingd_cont{
+	padding:5px 5px;
+	background-color:#fff;
+	}
+.ding_img{
+	
+	height:60px;
+	width:60px;
+	display:block;
+	border:1px solid #efefef;
+	}
+.shop_info{
+	font:12px "宋体";
+	color:#333;
+	line-height:25px;
+	padding:0 10px;
+	}
+.shop_info i{
+	color:#f74f4f;
+	}
+.tj_shuliang{
+	height:25px;
+	line-height:25px;
+	text-align:right;
+	padding:0 10px;
+	}
+.tj_shuliang i{
+	font:bold 12px "宋体";
+	color:#f74f4f;
+	padding:0 3px;
+	}
+	
+
+.oder_cont #List1,.oder_cont #List2{float:left;}
+
+
+.publicity-prev-horizontal {
+    position: absolute;
+    top: 60px;
+    left: -34px;
+    width: 22px;
+    height: 210px;
+    cursor: pointer;
+    background: transparent url(../images/jt_left.gif) no-repeat 0 0;
+}
+
+.publicity-next-horizontal {
+    position: absolute;
+    top: 60px;
+    right: -38px;
+    width: 22px;
+    height: 210px;
+    cursor: pointer;
+    background: transparent url(../images/jt_right.gif) no-repeat 0 0;
+}
+
+	
+.fj_center1 #List3,.fj_center1 #List4{float:left;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

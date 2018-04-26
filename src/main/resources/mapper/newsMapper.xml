@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jf.dao.NewsDao">
+	<select id="getForPage" resultType="News">
+		SELECT * from t_news
+	</select>
+	<!-- 根据ID查找 -->
+	<select id="getByid" parameterType="String" resultType="News">
+		SELECT
+		*FROM t_news WHERE id=#{0}
+	</select>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="News" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into t_news(title,time,infos)
+		values(#{title},#{time},#{infos})
+	</insert>
+	<!-- 资料修改 -->
+	<update id="update" parameterType="News">
+		update t_news set
+		title=#{title},time=#{time},infos=#{infos}
+		where id=#{id}
+	</update>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="int">
+		delete from t_news where
+		id=#{id}
+	</delete>
+	
+	<select id="getForIndex" resultType="Notice">
+		SELECT
+		*FROM t_news ORDER BY time desc LIMIT 0,4
+	</select>
+</mapper>

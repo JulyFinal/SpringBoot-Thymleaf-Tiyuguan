@@ -1,0 +1,46 @@
+/* ===============================================================
+Basic autoComplete Styles 
+================================================================*/
+.acp-result-list-ul{
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+.acp-result-list-ul li{
+}
+
+.acp-result-list-ul a{
+	background-color: #ffffff;
+	border-color: #dddddd;
+	color: #333333;
+	text-shadow: 0 0 0 #f3f3f3;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-width: 1px 0 0;
+	border-style: solid;
+	margin: 0;
+	display: block;
+	position: relative;
+	text-align: left;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	line-height: 21px;
+	padding: .7em 1em;
+}
+
+.acp-result-list-ul a:hover {
+	background-color: #ed3030;
+	border-color: #dddddd;
+	color: #ffffff;
+	text-shadow: 0 0 0 #f3f3f3;
+}
+
+.acp-result-list-ul li:first-child a{
+	border-top-width: 1px;
+	
+}
+
+.acp-result-list-ul li:last-child a{
+	border-bottom-width: 1px;
+}

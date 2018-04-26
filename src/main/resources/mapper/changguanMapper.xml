@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jf.dao.ChangguanDao">
+	<select id="getForPage" resultType="Changguan">
+		SELECT * from t_changguan
+	</select>
+			<select id="getUsedList" resultType="Changguan">
+		SELECT * from t_changguan where state='已租'
+	</select>
+	
+			<select id="getEmptyList" resultType="Changguan">
+		SELECT * from t_changguan where state='空'
+	</select>
+	
+		<select id="getAll" resultType="Changguan">
+		SELECT * from t_changguan
+	</select>
+	<!-- 根据ID查找 -->
+	<select id="getByid" parameterType="String" resultType="Changguan">
+		SELECT
+		*FROM t_changguan WHERE id=#{0}
+	</select>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="Changguan" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into t_changguan(no,state,name,address,urls,infos,tel,type  )
+		values(#{no},#{state},#{name},#{address} ,#{urls},#{infos},#{tel},#{type})
+	</insert>
+	<!-- 资料修改 -->
+	<update id="update" parameterType="Changguan">
+		update t_changguan set
+		no=#{no},state=#{state} ,name=#{name} ,address=#{address} ,urls=#{urls},infos=#{infos},tel=#{tel},type=#{type}
+		where id=#{id}
+	</update>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="int">
+		delete from t_changguan where
+		id=#{id}
+	</delete>
+	
+	<!-- 删除 -->
+	<select id="getForIndex" resultType="Changguan">
+		SELECT
+		*FROM t_changguan ORDER BY id desc LIMIT 0,4
+	</select>
+</mapper>

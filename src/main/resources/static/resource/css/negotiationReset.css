@@ -1,0 +1,91 @@
+@charset "utf-8";
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+a{text-decoration:none;color:#838383;}
+img{border:none; margin:0; padding:0;}
+input{font:12px Arial;}
+div{ text-align:left;}
+ul{ list-style:none;}
+ol{ list-style:none;}
+body{text-align:center;font-size:12px;color:#333; font-size:62.5%;}
+
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+ header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+	clear:both;
+}
+.cs_tc {
+	position: absolute;
+	left: 350px;
+    top: 116px;
+	width:600px;
+	height:600px;
+	margin:0 auto;
+	padding:5px 5px;
+	background-color:#fff;
+	border:#ddd solid 2px;
+	z-index:1000001;
+	display: none;
+}
+#negotiation_commit {
+	position: absolute;
+	left: 350px;
+    top: 116px;
+	width:600px;
+	height:400px;
+	margin:0 auto;
+	padding:5px 5px;
+	background-color:#fff;
+	border:#ddd solid 2px;
+	z-index:100001;
+	display: none;
+}
