@@ -147,7 +147,7 @@ public class IndexController {
         ap.setCid(Integer.parseInt(id));
         ap.setEndtime(request.getParameter("endtime"));
         ap.setName(login.getName());
-        ap.setStarttime(request.getParameter("endtime"));
+        ap.setStarttime(request.getParameter("starttime"));
         ap.setState("申请中");
         ap.setTel(request.getParameter("tel"));
         ap.setTime(date);
@@ -197,7 +197,6 @@ public class IndexController {
         return new ModelAndView("index/bloglist");
     }
 
-
     @RequestMapping("/addBlog")
     public ModelAndView addBlog(HttpServletRequest request, HttpServletResponse response) {
         return new ModelAndView("index/addBlog");
@@ -216,7 +215,6 @@ public class IndexController {
         request.setAttribute("list", list);
         return new ModelAndView("index/bloginfo");
     }
-
 
     @RequestMapping("/loginUI")
     public ModelAndView loginUI(HttpServletRequest request, HttpServletResponse response) {
