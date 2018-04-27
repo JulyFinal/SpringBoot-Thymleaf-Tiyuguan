@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>管理主页</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link th:href="@{~/css/bootstrap.min.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/bootstrap-responsive.min.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/matrix-media.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/matrix-style2.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/jquery.gritter.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/fullcalendar.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/style/font-awesome/css/font-awesome.css}" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+<div id="content">
+    <div  class="quick-actions_homepage">
+        <ul class="quick-actions">
+            <li class="bg_lb"> <a class="menu_a"  th:href="@{/basic/index}"> <i class="icon-dashboard"></i> 我的工作台 </a> </li>
+            <li class="bg_lg"> <a class="menu_a"  th:href="@{/news/newslist}"> <i class="icon-envelope"></i> 新闻中心</a> </li>
+            <li class="bg_ly"> <a class="menu_a"  th:href="@{/notice/newslist}"> <i class=" icon-globe"></i> 公告列表 </a> </li>
+            <li class="bg_lo"> <a class="menu_a"  th:href="@{/infos/view}"> <i class="icon-group"></i> 信息 </a> </li>
+            <li class="bg_ls"> <a class="menu_a"  th:href="@{/basic/pwdUI}"> <i class="icon-wrench"></i> 密码重置</a> </li>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="widget-box">
+                    <div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i class="icon-chevron-down"></i></span>
+                        <h5>公告列表</h5>
+                    </div>
+                    <div class="widget-content nopadding collapse in" id="collapseG2">
+                        <ul class="recent-posts">
+
+                                <li th:each="bean:${mlist}">
+                                    <div class="user-thumb"> <img width="40" height="40" alt="User" th:src="@{~/img/demo/av1.jpg}"> </div>
+                                    <div class="article-post"> <span class="user-info" th:text="| ${bean.title } / ${bean.time } |"></span>
+                                        <p><a th:href="@{'/notice/view?id='+${bean.id }}" th:text="${bean.infos }"></a> </p>
+                                    </div>
+                                </li>
+
+                            <button class="btn btn-warning btn-mini" onclick="top.location.href='../notice/newslist'">查看更多</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="widget-box">
+                    <div class="widget-title bg_lo"  data-toggle="collapse" href="#collapseG3" > <span class="icon"> <i class="icon-chevron-down"></i> </span>
+                        <h5>新闻列表</h5>
+                    </div>
+                    <div class="widget-content nopadding updates collapse in" id="collapseG3">
+
+                            <div class="new-update clearfix" th:each="bean:${mlist}"><i class="icon-ok-sign"></i>
+                                <div class="update-done"><a title="" th:href="@{'/news/view?id='+${bean.id}}"><strong th:text="${bean.title }"></strong></a> <span th:text="${bean.time}">  </span> </div>
+                            </div>
+
+                        <div class="new-update clearfix">
+                            <button class="btn btn-warning btn-mini" onclick="top.location.href='../news/newslist'">查看更多</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{~js/excanvas.min.js}"></script>
+<script th:src="@{~js/jquery.min.js}"></script>
+<script th:src="@{~js/jquery.ui.custom.js}"></script>
+<script th:src="@{~js/bootstrap.min.js}"></script>
+<script th:src="@{~js/jquery.flot.min.js}"></script>
+<script th:src="@{~js/jquery.flot.resize.min.js}"></script>
+<script th:src="@{~js/jquery.peity.min.js}"></script>
+<script th:src="@{~js/jquery.gritter.min.js}"></script>
+<script th:src="@{~js/matrix.js}"></script>
+<script th:src="@{~js/fullcalendar.min.js}"></script>
+<script th:src="@{~js/matrix.calendar.js}"></script>
+<script th:src="@{~js/matrix.chat.js}"></script>
+<script th:src="@{~js/jquery.validate.js}"></script>
+<script th:src="@{~js/matrix.form_validation.js}"></script>
+<script th:src="@{~js/jquery.wizard.js}"></script>
+<script th:src="@{~js/jquery.uniform.js}"></script>
+<script th:src="@{~js/select2.min.js}"></script>
+<script th:src="@{~js/matrix.popover.js}"></script>
+<script th:src="@{~js/jquery.dataTables.min.js}"></script>
+<script th:src="@{~js/matrix.tables.js}"></script>
+<script th:src="@{~js/matrix.interface.js}"></script>
+<script type="text/javascript">
+    // This function is called from the pop-up menus to transfer to
+    // a different page. Ignore if the value returned is a null string:
+    function goPage (newURL) {
+
+        // if url is empty, skip the menu dividers and reset the menu selection to default
+        if (newURL != "") {
+
+            // if url is "-", it is this page -- reset the menu:
+            if (newURL == "-" ) {
+                resetMenu();
+            }
+            // else, send page to designated URL
+            else {
+                document.location.href = newURL;
+            }
+        }
+    }
+
+    // resets the menu selection upon entry to this page:
+    function resetMenu() {
+        document.gomenu.selector.selectedIndex = 2;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>修改密码</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link th:href="@{~/css/bootstrap.min.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/bootstrap-responsive.min.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/matrix-media.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/matrix-style2.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/style/font-awesome/css/font-awesome.css}" type="text/css" rel="stylesheet"/>
+<body>
+
+<div id="content">
+    <div id="content-header">
+        <h1>密码修改</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title"> <span class="icon"> <i class="icon-pencil"></i> </span>
+                        <h5>密码修改</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form id="form-wizard" class="form-horizontal" method="post" th:action="@{/basic/changepwd}">
+                            <div id="form-wizard-1" class="step">
+                                <div class="control-group">
+                                    <label class="control-label">新密码</label>
+                                    <div class="controls">
+                                        <input id="password" type="password" name="password"  class="span4"/>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">确认密码</label>
+                                    <div class="controls">
+                                        <input id="password2" type="password" name="password2"  class="span4"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="form-wizard-2" class="step">
+                                <div class="control-group">
+                                    <label class="control-label">Email</label>
+                                    <div class="controls">
+                                        <input id="email" type="text" name="email"  class="span4"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <input id="back" class="btn btn-primary" type="reset" value="Back" />
+                                <input id="next" class="btn btn-primary" type="submit" value="Next" />
+                                <div id="status"></div>
+                            </div>
+                            <div id="submitted"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{js/jquery.min.js}"></script>
+<script th:src="@{js/jquery.ui.custom.js}"></script>
+<script th:src="@{js/bootstrap.min.js}"></script>
+<script th:src="@{js/jquery.validate.js}"></script>
+<script th:src="@{js/jquery.wizard.js}"></script>
+<script th:src="@{js/matrix.js}"></script>
+<script th:src="@{js/matrix.wizard.js}"></script>
+</body>
+</html>

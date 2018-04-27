@@ -36,8 +36,8 @@
             </a>
                 <ul>
 
-                        <li th:each="c:${menu.mlist}"><a class="menu_a" th:href="${c.urls}"><i
-                                class="icon icon-caret-right" th:text="${c.title}"></i></a></li>
+                        <li th:each="c:${menu.mlist}"><a class="menu_a" th:href="${c.urls}" th:text="${c.title}"><i
+                                class="icon icon-caret-right"></i></a></li>
 
                 </ul>
             </li>
@@ -54,12 +54,12 @@
     <!--breadcrumbs-->
     <div id="content-header">
         <div id="breadcrumb">
-            <a th:href="@{/basic/index}" title="Go to Home" class="tip-bottom"><i
+            <a href="../basic/index" title="Go to Home" class="tip-bottom"><i
                     class="icon-home"></i> Home</a>
         </div>
     </div>
     <!--End-breadcrumbs-->
-    <iframe th:src="@{/basic/index}" id="iframe-main" frameborder='0'
+    <iframe src="../basic/index" id="iframe-main" frameborder='0'
             style="width:100%;"></iframe>
 </div>
 <!--end-main-container-part-->
