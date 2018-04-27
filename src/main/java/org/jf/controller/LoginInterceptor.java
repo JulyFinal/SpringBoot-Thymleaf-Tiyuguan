@@ -20,7 +20,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         Login login= (Login) session.getAttribute("login");
         // 5、如果用户session已经过期，跳转到登录页面
         if (login == null) {
-            httpServletResponse.sendRedirect(httpServletRequest.getContextPath()+ "/templates/index/loginUI");
+            httpServletResponse.sendRedirect(httpServletRequest.getContextPath()+ "/index/loginUI");
             return false;
         }
         // 6、如果没有过期，放行。

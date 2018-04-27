@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <title>个人中心</title>
+    <title>场馆信息</title>
     <link th:href="@{~/style/common.css}" type="text/css" rel="stylesheet"/>
-    <link th:href="@{~/style/user.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/style/article.css}" type="text/css" rel="stylesheet"/>
     <link th:href="@{~/style/bootstrap.min.css}" type="text/css" rel="stylesheet"/>
     <link th:href="@{~/style/font-awesome/css/font-awesome.min.css}" type="text/css" rel="stylesheet"/>
 </head>
@@ -41,67 +41,81 @@
     <div class="container-fluid"></div>
 </div>
 
-<!--主体部分-->
-<div class="container user">
-    <div class="position clearfix">
-        <a th:href="@{index}">首页</a> / 个人中心
-    </div>
-    <div class="user-cont clearfix">
-        <div class="col-md-12">
-            <div class="user-right-n clearfix">
-                <ul id="right-tab" class="nav nav-tabs">
-                    <li role="presentation" class="active"><a href="#myArticle"
-                                                              id="home-tab1" data-toggle="tab"><i class="fa fa-book"></i>&nbsp;我的文章</a>
-                    </li>
-                    <li role="presentation"><a href="#myCollection"
-                                               id="home-tab2" data-toggle="tab"><i class="fa fa-star"></i>&nbsp;我的申请</a>
-                    </li>
-                </ul>
+<div class="container-fluid content-box" id="article">
+    <div class="container content">
 
-                <div class="user-right-n clearfix tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="myArticle">
-                            <div class="art-row" th:each="bean:${blist}">
-                                <a href="" class="time"><i class="fa fa-clock-o"></i>&nbsp;<span th:text="${bean.time}"></span> </a>
-                                <a href="" class="time"><i class="fa fa-list-ul"></i>&nbsp;发表在:&nbsp;<span>前端</span> </a>
-                                <h4>
-                                    <a  th:href="@{'/index/bloginfo?id='+${bean.id}}" class="title" th:text="${bean.title}"></a>
-                                </h4>
-                            </div>
+        <!-- 左 -->
+        <div class="col-lg-9 col-md-12 col-sm-12">
+
+            <div class="project">
+
+                <!-- 文章头部 -->
+                <div class="project-header clearfix">
+                    <h1 th:text="${bean.name}"></h1>
+                    <p th:text="|联系电话：${bean.tel}|"></p>
+                    <div class="l">
+							<span data-toggle="tooltip" data-placement="bottom"
+                                  data-original-title="最后更新时间" data-container="#article" th:text="|&nbsp;${bean.type}|"><i
+                                    class="fa fa-clock-o"></i></span>
                     </div>
-
-                    <div role="tabpanel" class="tab-pane" id="myCollection">
-                            <div class="art-row" th:each="bean:${alist}">
-                                <a href="" class="author"><i class="fa fa-user"></i>&nbsp;<span th:text="${bean.name}">
-									</span> </a> <a href="" class="time"><i class="fa fa-clock-o"></i>&nbsp;
-                                <span th:text="${bean.starttime }+'&nbsp;'+${bean.endtime}"></span>
-                            </a> <a href="" class="time"><i class="fa fa-list-ul" th:text="'&nbsp;状态:'+${bean.state}+'&nbsp;'"></i>
-                            </a>
-                                <h4>
-                                    <a href="" class="title" th:text="${bean.chewei}"></a>
-                                </h4>
-                                <p th:text="'电话：'+${bean.tel}"/>
-                            </div>
                 </div>
+                <!-- 文章头部 -->
+
+                <!-- 文章主体内容部分 -->
+                <div class="project-content clearfix">
+                    <img th:src="@{|~/${bean.urls}|}"
+                         class="img-thumbnail img-responsive center-block">
+                    <p th:text="${bean.infos}"></p>
                 </div>
             </div>
         </div>
+        <!-- 左 -->
+
+        <!-- 右 -->
+        <div class="col-lg-2" id="right">
+            <!-- 文章作者部分 -->
+            <div class="user-center clearfix">
+
+                <div class="author-tit">PROMULGATOR</div>
+
+                <span class="headimg center-block"><a href=""><img
+                        th:src="@{~/images/lo.png}"> </a> </span>
+                <div class="user-info clearfix">
+                    <a href="" class="user-name"><h4 th:if="${session.login} !=null" th:text="${session.login.name}"></h4> </a> <small>hello,
+                    world</small>
+                </div>
+
+                <button type="button" class="btn btn-default">
+                    <a href="#">&nbsp;体育场 </a>
+                </button>
+            </div>
+            <!-- 文章作者部分 -->
+
+            <!-- 右侧菜单部分 -->
+
+            <button type="button" class="btn btn-info" id="write">
+                <a th:href="@{'/index/applyUI?id='+${bean.id}}"> <i
+                        class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;我要预约 </a>
+            </button>
+        </div>
+        <!-- 右 -->
     </div>
 </div>
-<!--主体结束-->
+
 <nav class="foot navbar-inverse navbar-fixed-bottom">
     <ul class="list-inline">
         <li class="footer-ss"><a href="">在线反馈</a></li>
         <li class="footer-ss"><a href="">帮助中心</a></li>
-        <li>Copyright © 2014-2016 </li>
     </ul>
 </nav>
 
 <script th:src="@{~/js/jquery.min.js}" type="text/javascript"></script>
 <script th:src="@{~/js/bootstrap.min.js}" type="text/javascript"></script>
 <script th:src="@{~/js/common.js}" type="text/javascript"></script>
+<script th:src="@{~/js/article.js}" type="text/javascript"></script>
 <script>
     var scrollTop = 0;
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         var nowScrollTop = $(document).scrollTop();
         if (nowScrollTop > scrollTop) {
             $('.wrap').addClass('hide-wrap');
@@ -109,11 +123,6 @@
             $('.wrap').removeClass('hide-wrap');
         }
         scrollTop = nowScrollTop;
-    });
-
-    $('.nav-tabs li a').click(function (e) {
-        e.preventDefault();
-        $(this).tab('show')
     });
 </script>
 </body>

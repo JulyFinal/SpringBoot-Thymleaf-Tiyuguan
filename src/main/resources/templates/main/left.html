@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>首页左侧导航</title>
+    <link rel="stylesheet" type="text/css" th:href="@{~/css/public.css}"/>
+    <script type="text/javascript"  th:src="@{~/js/jquery.min.js}"></script>
+    <script type="text/javascript"  th:src="@{~/js/public.js}"></script>
+</head>
+<body id="bg">
+<!-- 左边节点 -->
+<div class="container">
+
+    <div class="leftsidebar_box">
+        <a th:href="@{main.html}" target="main">
+            <div class="line">
+                <img th:src="@{~/img/coin01.png}"/>&nbsp;&nbsp;首页
+            </div>
+        </a>
+        <dl class="system_log">
+            <dt>
+                <img class="icon1" th:src="@{~/img/coin03.png}"/><img class="icon2"
+                                                                 th:src="@{~/img/coin04.png}"/> 网站管理<img class="icon3"
+                                                                                                    th:src="@{~/img/coin19.png}"/><img
+                    class="icon4"
+                    th:src="@{~/img/coin20.png}"/>
+            </dt>
+            <dd>
+                <img class="coin11" th:src="@{~/img/coin111.png}"/><img class="coin22"
+                                                                   th:src="@{~/img/coin222.png}"/><a class="cks"
+                                                                                                th:href="@{/users/user}"
+                                                                                                target="main">用户管理</a><img
+                    class="icon5" th:src="@{~/img/coin21.png}"/>
+            </dd>
+            <dd>
+                <img class="coin11" th:src="@{~/img/coin111.png}"/><img class="coin22"
+                                                                   th:src="@{~/img/coin222.png}"/><a class="cks"
+                                                                                                th:href="@{/users/user}"
+                                                                                                target="main">管理员管理</a><img
+                    class="icon5" th:src="@{~/img/coin21.png}"/>
+            </dd>
+        </dl>
+        <dl class="system_log">
+            <dt>
+                <img class="icon1" th:src="@{~/img/coin05.png}"/><img class="icon2"
+                                                                 th:src="@{~/img/coin06.png}"/> 仓库管理<img class="icon3"
+                                                                                                    th:src="@{~/img/coin19.png}"/><img
+                    class="icon4"
+                    th:src="@{~/img/coin20.png}"/>
+            </dt>
+            <dd>
+                <img class="coin11" th:src="@{~/img/coin111.png}"/><img class="coin22"
+                                                                   th:src="@{~/img/coin222.png}"/><a class="cks"
+                                                                                                th:href="@{/banner.html}"
+                                                                                                target="main">管理</a><img
+                    class="icon5" th:src="@{~/img/coin21.png}"/>
+            </dd>
+            <dd>
+                <img class="coin11" th:src="@{~/img/coin111.png}"/><img class="coin22"
+                                                                   th:src="@{~/img/coin222.png}"/><a class="cks"
+                                                                                                th:href="@{/opinion.html}"
+                                                                                                target="main">汽车种类增加</a><img
+                    class="icon5" th:src="@{~/img/coin21.png}"/>
+            </dd>
+            <dd>
+                <img class="coin11" th:src="@{~/img/coin111.png}"/><img class="coin22"
+                                                                   th:src="@{~/img/coin222.png}"/><a class="cks"
+                                                                                                th:href="@{/opinion.html}"
+                                                                                                target="main">汽车入库</a><img
+                    class="icon5" th:src="@{~/img/coin21.png}"/>
+            </dd>
+
+        </dl>
+
+        <dl class="system_log">
+            <dt>
+                <img class="icon1" th:src="@{~/img/coinL1.png}"/><img class="icon2"
+                                                                 th:src="@{~/img/coinL2.png}"/> 系统管理<img class="icon3"
+                                                                                                    th:src="@{~/img/coin19.png}"/><img
+                    class="icon4"
+                    th:src="@{~/img/coin20.png}"/>
+            </dt>
+            <dd>
+                <img class="coin11" th:src="@{~/img/coin111.png}"/><img class="coin22"
+                                                                   th:src="@{~/img/coin222.png}"/><a th:href="@{/changepwd.html}"
+                                                                                                target="main"
+                                                                                                class="cks">修改密码</a><img
+                    class="icon5"
+                    th:src="@{~/img/coin21.png}"/>
+            </dd>
+            <dd>
+                <img class="coin11" th:src="@{~/img/coin111.png}"/><img class="coin22"
+                                                                   th:src="@{~/img/coin222.png}"/><a class="cks">退出</a><img
+                    class="icon5" th:src="@{~/img/coin21.png}"/>
+            </dd>
+        </dl>
+    </div>
+
+</div>
+</body>
+</html>

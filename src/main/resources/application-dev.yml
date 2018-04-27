@@ -14,9 +14,6 @@ logging:
 management:
     security:
         enabled: false
-mybatis:
-    mapper-locations: classpath*:mapper/*.xml
-    typeAliasesPackage: org.jf.entity
 server:
     context-path: /
     port: 8080
@@ -62,7 +59,7 @@ spring:
                 exclusions: '*.html,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
                 url-pattern: /*
     thymeleaf:
-      mode: HTML5
+      mode: LEGACYHTML5
       enabled: true
       content-type: text/html
       cache: false

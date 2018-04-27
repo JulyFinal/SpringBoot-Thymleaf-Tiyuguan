@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>管理员登陆</title>
+    <link th:href="@{~/css/bootstrap.min.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/bootstrap-responsive.min.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/matrix-login.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/style/font-awesome/css/font-awesome.css}" type="text/css" rel="stylesheet"/>
+    <style type="text/css">
+        input {
+            font-family: "Microsoft Yahei";
+        }
+
+        .control-label {
+            color: #B2DFEE;
+            padding-left: 4px;
+        }
+    </style>
+</head>
+<body onkeydown="keydown()">
+<div id="loginbox">
+    <div class="control-group normal_text">
+        <h2 style="color:#B2DFEE;font-size:28px;">后台管理系统</h2>
+        <span style="font-size:14px;color:gray;">版权所有 &copy; Final</span>
+    </div>
+    <form id="loginform" class="form-vertical" th:action="@{/login/login}" method="post">
+        <div class="control-group">
+            <label class="control-label">登陆账号</label>
+            <div class="controls">
+                <div class="main_input_box">
+                    <span class="add-on bg_lg"><i class="icon-user" style="font-size:16px;"></i></span>
+                    <input
+                        type="text" name="no" id="no"/>
+                </div>
+            </div>
+        </div>
+        <div class="control-group2">
+            <label class="control-label">登陆密码</label>
+            <div class="controls">
+                <div class="main_input_box">
+                    <span class="add-on bg_ly"><i class="icon-lock" style="font-size:16px;"></i></span>
+                    <input
+                        type="password" name="pwd" id="pwd"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <!--   <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">忘记密码？</a></span>-->
+            <span class="pull-left"><input type="submit" id="checkBtn" onClick="checkLogin()" class="btn btn-success"
+                                           style="width:445px;" value=" 登&nbsp;&nbsp;&nbsp;&nbsp;录"/></span>
+        </div>
+    </form>
+</div>
+
+<script th:src="@{~/js/jquery.min.js}"></script>
+<script th:src="@{~/js/matrix.login.js}"></script>
+</body>
+</html>

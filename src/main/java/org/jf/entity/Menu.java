@@ -1,7 +1,13 @@
 package org.jf.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
 public class Menu {
 	private String title;
 	private List<ChildMenu> mlist;
@@ -18,7 +24,7 @@ public class Menu {
 	public void setMlist(List<ChildMenu> mlist) {
 		this.mlist = mlist;
 	}
-	
+
 	public int getMnum() {
 		return mnum;
 	}
@@ -31,5 +37,5 @@ public class Menu {
 		this.mlist = mlist;
 		this.mnum=mnum;
 	}
-	
+
 }

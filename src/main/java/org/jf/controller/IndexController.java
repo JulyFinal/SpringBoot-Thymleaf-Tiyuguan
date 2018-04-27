@@ -234,7 +234,7 @@ public class IndexController {
         if (login == null) {
             response.setContentType("text/html;charset=utf-8");
             response.getWriter().write("<script>alert('会话过期，请重新登陆！');</script>");
-            response.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
+            response.getWriter().write("<script> window.location='../index/loginUI' ;window.close();</script>");
             response.getWriter().flush();
         }
         int uid = login.getId();
@@ -264,7 +264,7 @@ public class IndexController {
         if (login == null) {
             response.setContentType("text/html;charset=utf-8");
             response.getWriter().write("<script>alert('会话过期，请重新登陆！');</script>");
-            response.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
+            response.getWriter().write("<script> window.location='../index/loginUI' ;window.close();</script>");
             response.getWriter().flush();
         }
         int uid = login.getId();

@@ -38,7 +38,7 @@ function checkLogin(){
             }else if(data == -1){
                 showDialog("登陆信息","<span style='color:red;'>抱歉，账号和密码错误，登录失败！</span>");
             }else{
-                showDialog("登陆信息","<span style='color:red;'>抱歉，你的账号非园长或管理员，不能登录！</span>");
+                showDialog("登陆信息","<span style='color:red;'>抱歉，你的账号非管理员，不能登录！</span>");
             }
         },    
         error : function() {}    

@@ -6,6 +6,7 @@ import org.jf.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -121,7 +122,7 @@ public class LoginController {
 			clist2.add(cm22);
 			clist2.add(cm23);
 			clist2.add(cm24);
-			Menu m2= new Menu("资讯管理",clist2.size(),clist2);
+			Menu m2= new Menu("信息管理",clist2.size(),clist2);
 			
 			List<ChildMenu> clist3 = new ArrayList<ChildMenu>();
 			ChildMenu cm31= new ChildMenu("添加场馆", "../changguan/addUI");

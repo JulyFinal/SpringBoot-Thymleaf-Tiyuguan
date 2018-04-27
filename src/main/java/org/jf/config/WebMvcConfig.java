@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
     //配置拦截器
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/templates/index/mycenter", "/templates/index/addcomment", "/templates/index/addBlog").excludePathPatterns("/templates/index/login");
+        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/index/mycenter", "/index/addcomment", "/index/addBlog").excludePathPatterns("/index/login","/login/login");
         super.addInterceptors(registry);
     }
     //配置首页

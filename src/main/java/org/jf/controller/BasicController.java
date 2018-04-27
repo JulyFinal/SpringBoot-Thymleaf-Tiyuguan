@@ -31,7 +31,7 @@ public class BasicController {
 	/**
 	 * index
 	 */
-	@RequestMapping("/templates/index")
+	@RequestMapping("/index")
 	public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
 		List<Notice> nlist= noticeService.getIndex();
 		List<News> mlist= newsService.getIndex();

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>后台管理模板</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link th:href="@{~/css/bootstrap.min.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/bootstrap-responsive.min.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/matrix-media.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/matrix-style.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/style/font-awesome/css/font-awesome.css}" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<!--Header-part-->
+<div id="header">
+    <h1>
+        <a href="dashboard.html">管理系统平台</a>
+    </h1>
+</div>
+<!--close-Header-part-->
+
+<!--top-Header-menu-->
+<!--close-top-Header-menu-->
+
+
+<!--sidebar-menu-->
+<div id="sidebar" style="OVERFLOW-Y: auto; OVERFLOW-X:hidden;">
+    <ul>
+        <li class="submenu active"><a class="menu_a" th:href="@{/basic/index}"><i
+                class="icon icon-home"></i> <span>控制面板</span> </a>
+        </li>
+
+            <li class="submenu" th:each="menu:${menulist}"><a href="#"> <i class="icon icon-table"></i>
+                <span th:text="${menu.title}"></span> <span class="label label-important" th:text="${menu.mnum}"></span>
+            </a>
+                <ul>
+
+                        <li th:each="c:${menu.mlist}"><a class="menu_a" th:href="${c.urls}"><i
+                                class="icon icon-caret-right" th:text="${c.title}"></i></a></li>
+
+                </ul>
+            </li>
+
+        <li class="submenu"><a class="menu_a" href="#" onclick="top.location.href='../login/logout'"><i
+                class="icon icon-remove"></i> <span>退出登录</span> </a>
+        </li>
+    </ul>
+</div>
+<!--sidebar-menu-->
+
+<!--main-container-part-->
+<div id="content">
+    <!--breadcrumbs-->
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a th:href="@{/basic/index}" title="Go to Home" class="tip-bottom"><i
+                    class="icon-home"></i> Home</a>
+        </div>
+    </div>
+    <!--End-breadcrumbs-->
+    <iframe th:src="@{/basic/index}" id="iframe-main" frameborder='0'
+            style="width:100%;"></iframe>
+</div>
+<!--end-main-container-part-->
+
+<script th:src="@{~/js/excanvas.min.js}"></script>
+<script th:src="@{~/js/jquery.min.js}"></script>
+<script th:src="@{~/js/jquery.ui.custom.js}"></script>
+<script th:src="@{~/js/bootstrap.min.js}"></script>
+<script th:src="@{~/js/nicescroll/jquery.nicescroll.min.js}"></script>
+<script th:src="@{~/js/matrix.js}"></script>
+
+
+<script type="text/javascript">
+
+    //初始化相关元素高度
+    function init(){
+        $("body").height($(window).height()-80);
+        $("#iframe-main").height($(window).height()-90);
+        $("#sidebar").height($(window).height()-50);
+    }
+
+    $(function(){
+        init();
+        $(window).resize(function(){
+            init();
+        });
+    });
+
+    // This function is called from the pop-up menus to transfer to
+    // a different page. Ignore if the value returned is a null string:
+    function goPage (newURL) {
+        // if url is empty, skip the menu dividers and reset the menu selection to default
+        if (newURL != "") {
+            // if url is "-", it is this page -- reset the menu:
+            if (newURL == "-" ) {
+                resetMenu();
+            }
+            // else, send page to designated URL
+            else {
+                document.location.href = newURL;
+            }
+        }
+    }
+
+    // resets the menu selection upon entry to this page:
+    function resetMenu() {
+        document.gomenu.selector.selectedIndex = 2;
+    }
+
+    // uniform使用示例：
+    // $.uniform.update($(this).attr("checked", true));
+</script>
+</body>
+</html>

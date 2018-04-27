@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
-@MapperScan(basePackages = "org.jf.dao",sqlSessionFactoryRef="sqlSessionFactory")
 @EnableTransactionManagement
 public class SpringbootThymleafTiyuguanApplication {
 

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <title>帖子信息</title>
+    <link th:href="@{~/style/common.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/style/article.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/style/bootstrap.min.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/style/font-awesome/css/font-awesome.min.css}" type="text/css" rel="stylesheet"/>
+</head>
+</html>
+<body>
+<!--导航部分-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a th:href="@{/login/loginUI}" th:unless="${session.login} ne null"><i class="fa fa-user-md"></i>管理员登陆</a>
+                </li>
+                <li><a th:href="@{/index/loginUI}" th:unless="${session.login} ne null"><i class="fa fa-user"></i>注册/登录</a>
+                </li>
+                <li><a th:href="@{/index/mycenter}" th:if="${session.login}"><i class="fa fa-user"></i>个人中心</a></li>
+                <li><a th:href="@{/index/logout}" th:if="${session.login}"><i class="fa fa-user"></i>退出登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--导航部分-->
+<div class="wrap container-fluid">
+    <div class="container wrap-cont">
+        <a class="nzz" th:href="@{index}"><span class="sort"> <i class="fa fa-paint-brush"></i> &nbsp;首页 </span> </a>|
+        <a class="nzz" th:href="@{bloglist}"><span class="sort"><i class="fa fa-keyboard-o"></i> &nbsp;论坛交流</span>
+        </a>|
+        <a class="nzz" th:href="@{mycenter}"><span class="sort"><i class="fa fa-keyboard-o"></i> &nbsp;个人中心 </span>
+        </a>
+    </div>
+    <div class="container-fluid"></div>
+</div>
+<div class="container-fluid content-box" id="article">
+    <div class="container content">
+
+        <!-- 左 -->
+        <div class="col-lg-9 col-md-12 col-sm-12">
+
+            <div class="project">
+
+                <!-- 文章头部 -->
+                <div class="project-header clearfix">
+                    <h1 th:text="${bean.title}"></h1>
+                    <div class="l">
+							<span data-toggle="tooltip" data-placement="bottom"
+                                  data-original-title="最后更新时间" data-container="#article"
+                                  th:text="'&nbsp;'+${bean.time}"><i
+                                    class="fa fa-clock-o"></i></span>
+                    </div>
+                </div>
+                <!-- 文章头部 -->
+
+                <!-- 文章主体内容部分 -->
+                <div class="project-content clearfix">
+                    <div class="alert alert-info info" role="alert" th:text="${bean.infos}"></div>
+                </div>
+                <!-- 文章主体内容部分 -->
+
+                <!-- 相关文章推荐部分 -->
+                <!-- 相关文章推荐部分 -->
+
+                <!-- 文章评论展示部分 -->
+                <div class="pl clearfix">
+                    <h4>评论列表</h4>
+                    <div class="pl-content clearfix" th:each="cc:${list}">
+                        <div class="tx">
+                            <a href=""><img th:src="@{/images/lo.png}"> </a>
+                        </div>
+
+
+                        <div class="pl-header clearfix">
+                            <ul>
+                                <li class="pl-user" th:text="${cc.name}"></li>
+                                <li class="pl-time" th:text="${cc.time}"></li>
+                            </ul>
+                        </div>
+
+                        <div class="pl-wrap clearfix">
+                            <p th:text="${cc.message}"></p>
+
+                            <div class="pl-content center-block clearfix" th:each="c:${cc.clist}">
+                                <div class="tx">
+                                    <a href=""><img th:src="@{/images/lo.png}"> </a>
+                                </div>
+                                <div class="pl-header pl-header2 clearfix">
+                                    <ul>
+                                        <li class="pl-user" th:text="${c.name }"></li>
+                                        <li class="pl-time" th:text="${c.time }"></li>
+                                    </ul>
+                                </div>
+
+                                <div class="pl-wrap clearfix" th:text="${ c.message}"></div>
+                            </div>
+                            <a href="javascript:void(0)" class="pl-callback">回复</a>
+                        </div>
+                        <div class="callback-txt clearfix center-block">
+                            <a href="javascript:void(0)" class="qx">取消回复</a>
+                            <form th:action="@{/index/addccomment}" method="post">
+                                <input type="hidden" name="id" th:value="${cc.id}"> <input
+                                    type="hidden" name="root" th:value="${cc.root}">
+                                <textarea id="pl-text2" class="form-control" name="infos"
+                                          placeholder="回复内容..."></textarea>
+                                <button type="submit" class="btn btn-info">回复</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- 文章评论展示部分 -->
+                <form th:action="@{/index/addcomment}" method="post">
+                    <!-- 文章评论部分 -->
+                    <div class="pl clearfix">
+                        <input type="hidden" name="id" th:value="${bean.id}">
+                        <textarea id="pl-text" name="infos" class="form-control"
+                                  placeholder="说点什么吧..."></textarea>
+                        <button type="submit" class="btn btn-success pl-sub">提交评论</button>
+                    </div>
+                    <!-- 文章评论部分 -->
+                </form>
+            </div>
+        </div>
+        <!-- 左 -->
+
+        <!-- 右 -->
+        <div class="col-lg-2" id="right">
+            <!-- 文章作者部分 -->
+            <div class="user-center clearfix">
+
+                <div class="author-tit">PROMULGATOR</div>
+
+                <span class="headimg center-block"><a href=""><img
+                        th:src="@{~/images/lo.png}"> </a> </span>
+                <div class="user-info clearfix">
+                    <a href="" class="user-name"><h4 th:if="${session.login}!=null"
+                                                     th:text="${session.login.name}"></h4></a>
+                    <small>hello,
+                        world
+                    </small>
+                </div>
+
+            </div>
+            <!-- 文章作者部分 -->
+
+            <!-- 右侧菜单部分 -->
+
+            <button type="button" class="btn btn-info" id="write">
+                <a th:href="@{/index/addBlog}"> <i
+                        class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;我要发帖 </a>
+            </button>
+        </div>
+        <!-- 右 -->
+    </div>
+</div>
+
+<nav class="foot navbar-inverse navbar-fixed-bottom">
+    <ul class="list-inline">
+        <li class="footer-ss"><a href="">在线反馈</a></li>
+        <li class="footer-ss"><a href="">帮助中心</a></li>
+    </ul>
+</nav>
+
+<script th:src="@{~/js/jquery.min.js}" type="text/javascript"></script>
+<script th:src="@{~/js/bootstrap.min.js}" type="text/javascript"></script>
+<script th:src="@{~/js/common.js}" type="text/javascript"></script>
+<script th:src="@{~/js/article.js}" type="text/javascript"></script>
+<script>
+    var scrollTop = 0;
+    $(window).scroll(function () {
+        var nowScrollTop = $(document).scrollTop();
+        if (nowScrollTop > scrollTop) {
+            $('.wrap').addClass('hide-wrap');
+        } else {
+            $('.wrap').removeClass('hide-wrap');
+        }
+        scrollTop = nowScrollTop;
+    });
+</script>
+</body>
+</html>
