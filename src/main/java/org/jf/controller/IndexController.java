@@ -2,6 +2,7 @@ package org.jf.controller;
 
 import com.common.paginate.Page;
 import com.common.paginate.StringUitl;
+import com.common.util.isEffectiveDate;
 import org.jf.entity.*;
 import org.jf.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -130,18 +132,44 @@ public class IndexController {
     @RequestMapping("/apply")
     public void apply(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession) throws IOException {
         Login login = (Login) httpSession.getAttribute("login");
-        if (login == null) {
-            response.setContentType("text/html;charset=utf-8");
-            response.getWriter().write("<script>alert('请登录');</script>");
-            response.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
-            response.getWriter().flush();
-        }
+//        if (login == null) {
+//            response.setContentType("text/html;charset=utf-8");
+//            response.getWriter().write("<script>alert('请登录');</script>");
+//            response.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
+//            response.getWriter().flush();
+//        }
         Date dt = new Date();
-        SimpleDateFormat matter1 = new SimpleDateFormat("yyyy-MM-dd hh:MM:ss");
+        SimpleDateFormat matter1 = new SimpleDateFormat("yyyy-MM-dd");
         String date = matter1.format(dt);
+        List<Apply> list = applyService.getList();
+        for (Apply apply : list) {
+            String oldtime = apply.getTime();
+            if (oldtime.equals(date)) {
+                String starttime = request.getParameter("starttime");
+                String endtime = request.getParameter("endtime");
+                try {
+                    Date starttimeFormat = new SimpleDateFormat("HH:mm").parse(starttime);
+                    Date oldstarttimeFormat = new SimpleDateFormat("HH:mm").parse(apply.getStarttime());
+                    Date oldendtimeFormat = new SimpleDateFormat("HH:mm").parse(apply.getEndtime());
+                    if (isEffectiveDate.isEffectiveDate(starttimeFormat, oldstarttimeFormat, oldendtimeFormat)) {
+                        response.setContentType("text/html;charset=utf-8");
+                        response.getWriter().write("<script>alert('已被预约，请重新选定');</script>");
+                        response.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
+                        response.getWriter().flush();
+                    }
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+//                if(apply.getStarttime().equals(starttime)){
+//                response.setContentType("text/html;charset=utf-8");
+//                response.getWriter().write("<script>alert('已被预约，请重新选定');</script>");
+//                response.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
+//                response.getWriter().flush();
+//                }
+            }
+        }
         String id = request.getParameter("id");
         Changguan bl = changguanService.getByid(id);
-
         Apply ap = new Apply();
         ap.setChewei(bl.getName());
         ap.setCid(Integer.parseInt(id));

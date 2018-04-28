@@ -38,7 +38,6 @@ public class MybatisConfiguration implements TransactionManagementConfigurer {
             // 手写配置
             // 配置类型别名
             sessionFactoryBean.setTypeAliasesPackage("org.jf.entity");
-
             // 配置mapper的扫描，找到所有的mapper.xml映射文件
             Resource[] resources = new PathMatchingResourcePatternResolver()
                     .getResources("classpath*:mapper/*.xml");

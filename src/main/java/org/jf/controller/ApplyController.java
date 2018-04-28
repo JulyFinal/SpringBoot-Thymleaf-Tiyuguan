@@ -71,21 +71,7 @@ public class ApplyController {
 		request.setAttribute("list", list);
 		return new ModelAndView("apply/add");
 	}
-	// 申请界面
-	@RequestMapping("/mylist")
-	public ModelAndView mylist(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession) throws IOException {
-		Login login= (Login) httpSession.getAttribute("login");
-		if (login==null) {
-			response.setContentType("text/html;charset=utf-8");
-			response.getWriter().write("<script>alert('会话过期，请重新登录');</script>");  
-			response.getWriter().write("<script> top.location='../login/loginUI' ;window.close();</script>");
-			response.getWriter().flush(); 
-			return new ModelAndView("login");
-		}
-		List<Apply> list = service.getMyList(login.getId()+"");
-		request.setAttribute("list", list);
-		return new ModelAndView("apply/mylist");
-	} 
+
 	/************************************************************************************************************************************************
 				申请审核
 	 ************************************************************************************************************************************************/
@@ -97,7 +83,7 @@ public class ApplyController {
 		return new ModelAndView("apply/deallist");
 	}
 
-	@RequestMapping("/confirmlist")
+	@RequestMapping("/clist")
 	public ModelAndView clist(HttpServletRequest request, HttpServletResponse response) {
 		List<Apply> list = service.getConfirmedList();
 		request.setAttribute("list", list);

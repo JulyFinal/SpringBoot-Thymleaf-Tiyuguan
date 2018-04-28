@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>添加</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link th:href="@{~/css/bootstrap.min.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/bootstrap-responsive.min.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/matrix-media.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/matrix-style2.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/uniform.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{~/css/select2.css}" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" th:href="@{~/css/bootstrap-wysihtml5.css}"/>
+    <link rel="stylesheet" th:href="@{~/css/colorpicker.css}"/>
+    <link rel="stylesheet" th:href="@{~/css/datepicker.css}"/>
+    <link th:href="@{~/style/font-awesome/css/font-awesome.css}" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+
+<div id="content">
+    <div id="content-header">
+        <h1>场馆管理</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon"> <i class="icon-info-sign"></i> </span>
+                        <h5>添加</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form class="form-horizontal" method="post"
+                              th:action="@{/changguan/add}" name="basic_validate"
+                              id="basic_validate" novalidate="novalidate" enctype="multipart/form-data">
+                            <div class="control-group">
+                                <label class="control-label">所有人</label>
+                                <div class="controls">
+                                    <input type="text" name="no" id="no" class="span5">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">名称</label>
+                                <div class="controls">
+                                    <input type="text" name="name" id="name" class="span5">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">联系电话</label>
+                                <div class="controls">
+                                    <input type="text" name="tel" id="tel" class="span5">
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">地址</label>
+                                <div class="controls">
+                                    <input type="text" name="address" id="address" class="span5">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">图片</label>
+                                <div class="controls">
+                                    <input type="file" name="file" id="file">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">类型</label>
+                                <div class="controls">
+                                    <select name="type" id="type" class="span5">
+                                        <option value="篮球馆">篮球馆</option>
+                                        <option value="乒乓球馆">乒乓球馆</option>
+                                        <option value="羽毛球馆">羽毛球馆</option>
+                                        <option value="健身馆">健身馆</option>
+                                        <option value="游泳馆">游泳馆</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">
+										<textarea class="textarea_editor span12" rows="6" name="infos"
+                                                  id="infos" placeholder="简介 ..."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <input type="submit" value="提交" class="btn btn-success">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{~/js/jquery.min.js}"></script>
+<script th:src="@{~/js/jquery.ui.custom.js}"></script>
+<script th:src="@{~/js/bootstrap.min.js}"></script>
+<script th:src="@{~/js/bootstrap-colorpicker.js}"></script>
+<script th:src="@{~/js/bootstrap-datepicker.js}"></script>
+<script th:src="@{~/js/jquery.toggle.buttons.html}"></script>
+<script th:src="@{~/js/masked.js}"></script>
+<script th:src="@{~/js/jquery.uniform.js}"></script>
+<script th:src="@{~/js/select2.min.js}"></script>
+<script th:src="@{~/js/matrix.js}"></script>
+<script th:src="@{~/js/matrix.form_common.js}"></script>
+<script th:src="@{~/js/wysihtml5-0.3.0.js}"></script>
+<script th:src="@{~/js/jquery.peity.min.js}"></script>
+<script th:src="@{~/js/bootstrap-wysihtml5.js}"></script>
+</body>
+<script>
+    $('.textarea_editor').wysihtml5();
+</script>
+</html>

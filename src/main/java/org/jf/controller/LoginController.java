@@ -118,10 +118,14 @@ public class LoginController {
 			ChildMenu cm22= new ChildMenu("公告管理", "../notice/list");
 			ChildMenu cm23= new ChildMenu("新增新闻", "../news/addUI");
 			ChildMenu cm24= new ChildMenu("新闻管理", "../news/list");
+			ChildMenu cm25= new ChildMenu("帖子新增", "../blog/addUI");
+			ChildMenu cm26= new ChildMenu("帖子管理", "../blog/list");
 			clist2.add(cm21);
 			clist2.add(cm22);
 			clist2.add(cm23);
 			clist2.add(cm24);
+			clist2.add(cm25);
+			clist2.add(cm26);
 			Menu m2= new Menu("信息管理",clist2.size(),clist2);
 			
 			List<ChildMenu> clist3 = new ArrayList<ChildMenu>();
@@ -138,7 +142,6 @@ public class LoginController {
 			clist3.add(cm33);
 			clist3.add(cm34);
 			Menu m3= new Menu("场馆管理",clist3.size(),clist3);
-
 			List<ChildMenu> clistn = new ArrayList<ChildMenu>();
 			ChildMenu cmn1 = new ChildMenu("个人资料修改", "../basic/changeUI");
 			ChildMenu cmn2 = new ChildMenu("密码修改", "../basic/pwdUI");

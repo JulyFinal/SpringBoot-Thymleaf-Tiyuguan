@@ -21,7 +21,8 @@
             <li class="bg_lb"> <a class="menu_a"  th:href="@{/basic/index}"> <i class="icon-dashboard"></i> 我的工作台 </a> </li>
             <li class="bg_lg"> <a class="menu_a"  th:href="@{/news/newslist}"> <i class="icon-envelope"></i> 新闻中心</a> </li>
             <li class="bg_ly"> <a class="menu_a"  th:href="@{/notice/newslist}"> <i class=" icon-globe"></i> 公告列表 </a> </li>
-            <li class="bg_lo"> <a class="menu_a"  th:href="@{/infos/view}"> <i class="icon-group"></i> 信息 </a> </li>
+            <li class="bg_lr"> <a class="menu_a"  th:href="@{/apply/deallist}"> <i class="icon-group"></i> 审核申请 </a> </li>
+            <li class="bg_lh"> <a class="menu_a"  th:href="@{/apply/clist}"> <i class="icon-group"></i> 申请完成列表 </a> </li>
             <li class="bg_ls"> <a class="menu_a"  th:href="@{/basic/pwdUI}"> <i class="icon-wrench"></i> 密码重置</a> </li>
         </ul>
     </div>
@@ -35,7 +36,7 @@
                     <div class="widget-content nopadding collapse in" id="collapseG2">
                         <ul class="recent-posts">
 
-                                <li th:each="bean:${mlist}">
+                                <li th:each="bean:${nlist}">
                                     <div class="user-thumb"> <img width="40" height="40" alt="User" th:src="@{~/img/demo/av1.jpg}"> </div>
                                     <div class="article-post"> <span class="user-info" th:text="| ${bean.title } / ${bean.time } |"></span>
                                         <p><a th:href="@{'/notice/view?id='+${bean.id }}" th:text="${bean.infos }"></a> </p>

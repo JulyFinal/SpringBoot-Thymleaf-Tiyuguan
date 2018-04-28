@@ -14,9 +14,11 @@
     <link th:href="@{~/style/font-awesome/css/font-awesome.css}" type="text/css" rel="stylesheet"/>
 </head>
 <body>
+
+
 <div id="content">
     <div id="content-header">
-        <h1 align="left">公告列表</h1>
+        <h1 align="left">公告管理</h1>
     </div>
     <div class="container-fluid">
         <div class="row-fluid">
@@ -37,15 +39,15 @@
                             </tr>
                             </thead>
                             <tbody>
-
-                            <tr class="odd gradeX" th:each="bean:${list}">
-                                <td th:text="${bean.title}"></td>
-                                <td th:text="${bean.time}"></td>
-                                <td th:text="${bean.infos}"></td>
-                                <td class="center"><a th:href="@{'/news/editUI?id='+${bean.id}}"
-                                                      class="btn btn-primary btn-mini">修改</a>
-                                </td>
-                            </tr>
+                                <tr class="odd gradeX" th:each="bean:${list}">
+                                    <td th:text="${bean.title }"></td>
+                                    <td th:text="${bean.time }"></td>
+                                    <td th:text="${bean.infos }"></td>
+                                    <td class="center"><a th:href="@{'/news/editUI.do?id='+${bean.id }}"
+                                                          class="btn btn-primary btn-mini">修改</a>
+                                        <a  th:href="@{'/news/delete.do?id='+${bean.id }}" onclick="return confirm('确定要删除吗？')"
+                                           class="btn btn-danger btn-mini">删除</a></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -54,6 +56,7 @@
         </div>
     </div>
 </div>
+
 <script th:src="@{~js/jquery.min.js}"></script>
 <script th:src="@{~js/jquery.ui.custom.js}"></script>
 <script th:src="@{~js/bootstrap.min.js}"></script>

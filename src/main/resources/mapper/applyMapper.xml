@@ -14,8 +14,8 @@
 	<!-- 添加 -->
 	<insert id="insert" parameterType="Apply" useGeneratedKeys="true"
 		keyProperty="id">
-		INSERT INTO t_apply(name,chewei,starttime,endtime,uid,cid,tel,state)
-		VALUES(#{name},#{chewei},#{starttime},#{endtime},#{uid},#{cid},#{tel},#{state})
+		INSERT INTO t_apply(name,chewei,starttime,endtime,uid,cid,tel,state,time)
+		VALUES(#{name},#{chewei},#{starttime},#{endtime},#{uid},#{cid},#{tel},#{state},#{time})
 	</insert>
 	<!-- 资料修改 -->
 	<update id="update" parameterType="Apply">

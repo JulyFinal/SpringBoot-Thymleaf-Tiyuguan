@@ -1,4 +1,4 @@
-package org.jf.controller;
+package org.jf.config;
 
 import org.jf.entity.Login;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -20,6 +20,10 @@ public class LoginInterceptor implements HandlerInterceptor {
         Login login= (Login) session.getAttribute("login");
         // 5、如果用户session已经过期，跳转到登录页面
         if (login == null) {
+            httpServletResponse.setContentType("text/html;charset=utf-8");
+            httpServletResponse.getWriter().write("<script>alert('请登录');</script>");
+            httpServletResponse.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
+            httpServletResponse.getWriter().flush();
             httpServletResponse.sendRedirect(httpServletRequest.getContextPath()+ "/index/loginUI");
             return false;
         }

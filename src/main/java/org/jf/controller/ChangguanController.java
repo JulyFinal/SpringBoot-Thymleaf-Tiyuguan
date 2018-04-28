@@ -32,15 +32,7 @@ public class ChangguanController {
 
 		return new ModelAndView("changguan/newslist");
 	}
-	
-/*	@RequestMapping("/view")
-	public ModelAndView view(HttpServletRequest request, HttpServletResponse response) {
-		String id=request.getParameter("id");
-		System.out.println(id);
-		Changguan bean=service.getByid(id+"");
-		request.setAttribute("bean", bean);
-		return new ModelAndView("changguan/info");
-	}*/
+
 	/**
 	 * 列表
 	 */
@@ -94,8 +86,10 @@ public class ChangguanController {
 			url+="upload/"+filename;
 		}  
 		Changguan bean= new Changguan();
+		bean.setType(request.getParameter("type"));
+		bean.setTel(request.getParameter("tel"));
 		bean.setState("空");
-		bean.setName("无");
+		bean.setName(request.getParameter("name"));
 		bean.setUrls(url);
 		bean.setAddress(request.getParameter("address"));
 		bean.setNo(request.getParameter("no"));
@@ -129,10 +123,12 @@ public class ChangguanController {
 	public void edit(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String id=request.getParameter("id");
 		Changguan bean= service.getByid(id);
-		bean.setState("空");
-		bean.setName("无");
+		bean.setState(request.getParameter("state"));
+		bean.setTel(request.getParameter("tel"));
+		bean.setName(request.getParameter("name"));
 		bean.setNo(request.getParameter("no"));
 		bean.setAddress(request.getParameter("address"));
+		bean.setType(request.getParameter("type"));
 		service.update(bean);
 		response.setContentType("text/html;charset=utf-8");
 		response.getWriter().write("<script>alert('操作成功');</script>");  
