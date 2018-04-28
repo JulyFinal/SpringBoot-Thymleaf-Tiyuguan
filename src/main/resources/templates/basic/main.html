@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <title>管理主页</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link th:href="@{~/css/bootstrap.min.css}" type="text/css" rel="stylesheet"/>
     <link th:href="@{~/css/bootstrap-responsive.min.css}" type="text/css" rel="stylesheet"/>
     <link th:href="@{~/css/matrix-media.css}" type="text/css" rel="stylesheet"/>
@@ -16,34 +16,67 @@
 <body>
 
 <div id="content">
-    <div  class="quick-actions_homepage">
+    <div class="quick-actions_homepage">
         <ul class="quick-actions">
-            <li class="bg_lb"> <a class="menu_a"  th:href="@{/basic/index}"> <i class="icon-dashboard"></i> 我的工作台 </a> </li>
-            <li class="bg_lg"> <a class="menu_a"  th:href="@{/news/newslist}"> <i class="icon-envelope"></i> 新闻中心</a> </li>
-            <li class="bg_ly"> <a class="menu_a"  th:href="@{/notice/newslist}"> <i class=" icon-globe"></i> 公告列表 </a> </li>
-            <li class="bg_lr"> <a class="menu_a"  th:href="@{/apply/deallist}"> <i class="icon-group"></i> 审核申请 </a> </li>
-            <li class="bg_lh"> <a class="menu_a"  th:href="@{/apply/clist}"> <i class="icon-group"></i> 申请完成列表 </a> </li>
-            <li class="bg_ls"> <a class="menu_a"  th:href="@{/basic/pwdUI}"> <i class="icon-wrench"></i> 密码重置</a> </li>
+            <li class="bg_lb"><a class="menu_a" th:href="@{/basic/index}"> <i class="icon-dashboard"></i> 我的工作台 </a>
+            </li>
+            <li class="bg_lg"><a class="menu_a" th:href="@{/news/newslist}"> <i class="icon-envelope"></i> 新闻中心</a></li>
+            <li class="bg_ly"><a class="menu_a" th:href="@{/notice/newslist}"> <i class=" icon-globe"></i> 公告列表 </a>
+            </li>
+            <li class="bg_lr"><a class="menu_a" th:href="@{/apply/deallist}"> <i class="icon-group"></i> 审核申请 </a></li>
+            <li class="bg_lh"><a class="menu_a" th:href="@{/apply/clist}"> <i class="icon-group"></i> 申请完成列表 </a></li>
+            <li class="bg_lo"><a class="menu_a" th:href="@{/basic/changeUI}"> <i class="icon-group"></i> 个人资料修改 </a>
+            </li>
+            <li class="bg_ls"><a class="menu_a" th:href="@{/basic/pwdUI}"> <i class="icon-wrench"></i> 密码重置</a></li>
+        </ul>
+        <ul class="quick-actions">
+            <li class="bg_lg"><a class="menu_a" th:href="@{/changguan/addUI}"> <i class="icon-group"></i> 添加场馆 </a></li>
+            <li class="bg_ly"><a class="menu_a" th:href="@{/changguan/list}"> <i class="icon-group"></i> 场馆管理 </a></li>
+            <li class="bg_lr"><a class="menu_a" th:href="@{/changguan/emptylist}"> <i class="icon-group"></i> 空场馆 </a>
+            </li>
+            <li class="bg_lh"><a class="menu_a" th:href="@{/changguan/usedlist}"> <i class="icon-group"></i> 已用场馆 </a>
+            </li>
+            <li class="bg_lo"><a class="menu_a" th:href="@{/apply/list}"> <i class="icon-group"></i> 预约列表 </a></li>
+            <li class="bg_ls"><a class="menu_a" th:href="@{/notice/addUI}"> <i class="icon-group"></i> 添加公告 </a></li>
+        </ul>
+        </ul>
+        <ul class="quick-actions">
+            <li class="bg_lg"><a class="menu_a" th:href="@{/notice/list}"> <i class="icon-group"></i> 公告管理 </a></li>
+            <li class="bg_ly"><a class="menu_a" th:href="@{/news/addUI}"> <i class="icon-group"></i> 新增新闻 </a></li>
+            <li class="bg_lr"><a class="menu_a" th:href="@{/news/list}"> <i class="icon-group"></i> 新闻管理 </a></li>
+            <li class="bg_lh"><a class="menu_a" th:href="@{/blog/addUI}"> <i class="icon-group"></i> 帖子新增 </a></li>
+            <li class="bg_lo"><a class="menu_a" th:href="@{/blog/list}"> <i class="icon-group"></i> 帖子管理 </a></li>
+            <li class="bg_ls"><a class="menu_a" th:href="@{/admin/addUI}"> <i class="icon-group"></i> 新增管理员 </a></li>
+        </ul>
+        <ul class="quick-actions">
+            <li class="bg_lg"><a class="menu_a" th:href="@{/admin/list}"> <i class="icon-group"></i> 管理员列表 </a></li>
+            <li class="bg_ly"><a class="menu_a" th:href="@{/users/addUI}"> <i class="icon-group"></i> 新增用户 </a></li>
+            <li class="bg_lr"><a class="menu_a" th:href="@{/users/list}"> <i class="icon-group"></i> 用户管理 </a></li>
         </ul>
     </div>
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="span6">
                 <div class="widget-box">
-                    <div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i class="icon-chevron-down"></i></span>
+                    <div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i
+                            class="icon-chevron-down"></i></span>
                         <h5>公告列表</h5>
                     </div>
                     <div class="widget-content nopadding collapse in" id="collapseG2">
                         <ul class="recent-posts">
 
-                                <li th:each="bean:${nlist}">
-                                    <div class="user-thumb"> <img width="40" height="40" alt="User" th:src="@{~/img/demo/av1.jpg}"> </div>
-                                    <div class="article-post"> <span class="user-info" th:text="| ${bean.title } / ${bean.time } |"></span>
-                                        <p><a th:href="@{'/notice/view?id='+${bean.id }}" th:text="${bean.infos }"></a> </p>
-                                    </div>
-                                </li>
+                            <li th:each="bean:${nlist}">
+                                <div class="user-thumb"><img width="40" height="40" alt="User"
+                                                             th:src="@{~/img/demo/av1.jpg}"></div>
+                                <div class="article-post"><span class="user-info"
+                                                                th:text="| ${bean.title } / ${bean.time } |"></span>
+                                    <p><a th:href="@{'/notice/view?id='+${bean.id }}" th:text="${bean.infos }"></a></p>
+                                </div>
+                            </li>
 
-                            <button class="btn btn-warning btn-mini" onclick="top.location.href='../notice/newslist'">查看更多</button>
+                            <button class="btn btn-warning btn-mini" onclick="top.location.href='../notice/newslist'">
+                                查看更多
+                            </button>
                             </li>
                         </ul>
                     </div>
@@ -51,17 +84,22 @@
             </div>
             <div class="span6">
                 <div class="widget-box">
-                    <div class="widget-title bg_lo"  data-toggle="collapse" href="#collapseG3" > <span class="icon"> <i class="icon-chevron-down"></i> </span>
+                    <div class="widget-title bg_lo" data-toggle="collapse" href="#collapseG3"><span class="icon"> <i
+                            class="icon-chevron-down"></i> </span>
                         <h5>新闻列表</h5>
                     </div>
                     <div class="widget-content nopadding updates collapse in" id="collapseG3">
 
-                            <div class="new-update clearfix" th:each="bean:${mlist}"><i class="icon-ok-sign"></i>
-                                <div class="update-done"><a title="" th:href="@{'/news/view?id='+${bean.id}}"><strong th:text="${bean.title }"></strong></a> <span th:text="${bean.time}">  </span> </div>
-                            </div>
+                        <div class="new-update clearfix" th:each="bean:${mlist}"><i class="icon-ok-sign"></i>
+                            <div class="update-done"><a title="" th:href="@{'/news/view?id='+${bean.id}}"><strong
+                                    th:text="${bean.title }"></strong></a> <span th:text="${bean.time}">  </span></div>
+                        </div>
 
                         <div class="new-update clearfix">
-                            <button class="btn btn-warning btn-mini" onclick="top.location.href='../news/newslist'">查看更多</button></div>
+                            <button class="btn btn-warning btn-mini" onclick="top.location.href='../news/newslist'">
+                                查看更多
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,13 +131,13 @@
 <script type="text/javascript">
     // This function is called from the pop-up menus to transfer to
     // a different page. Ignore if the value returned is a null string:
-    function goPage (newURL) {
+    function goPage(newURL) {
 
         // if url is empty, skip the menu dividers and reset the menu selection to default
         if (newURL != "") {
 
             // if url is "-", it is this page -- reset the menu:
-            if (newURL == "-" ) {
+            if (newURL == "-") {
                 resetMenu();
             }
             // else, send page to designated URL
