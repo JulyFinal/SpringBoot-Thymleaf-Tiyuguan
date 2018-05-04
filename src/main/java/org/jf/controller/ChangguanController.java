@@ -21,17 +21,6 @@ public class ChangguanController {
 
 	@Autowired
 	private ChangguanService service;
-	
-	/**
-	 * 列表
-	 */
-	@RequestMapping("/newslist")
-	public ModelAndView newslist(HttpServletRequest request, HttpServletResponse response) {
-		List<Changguan> list= service.getAll();
-		request.setAttribute("list", list);
-
-		return new ModelAndView("changguan/newslist");
-	}
 
 	/**
 	 * 列表
@@ -69,7 +58,6 @@ public class ChangguanController {
 	 */
 	@RequestMapping("/add")
 	public void add(HttpServletRequest request, HttpServletResponse response, MultipartFile file)  throws IOException {
-		
 		String url="";
 		if(!file.isEmpty()) {
 			//上传文件路径

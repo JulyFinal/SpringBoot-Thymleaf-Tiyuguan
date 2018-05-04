@@ -42,7 +42,6 @@ public class BasicController {
 	
 	/**
 	 * 资料修改UI
-	 * @throws IOException 
 	 */
 	@RequestMapping("/changeUI")
 	public ModelAndView left(HttpServletRequest request, HttpServletResponse response , HttpSession httpSession) throws IOException {
@@ -68,8 +67,7 @@ public class BasicController {
 		}
 	}
 	/**
-	 *	管理员权限资料修改 
-	 * @return
+	 *	管理员权限资料修改
 	 */
 	@RequestMapping("/achange")
 	public ModelAndView achange(HttpServletRequest request, HttpServletResponse response) {
@@ -85,8 +83,7 @@ public class BasicController {
 		return new ModelAndView("basic/success");
 	}
 	/**
-	 *	用户权限资料修改 
-	 * @return
+	 *	用户权限资料修改
 	 */
 	@RequestMapping("/uchange")
 	public ModelAndView uchange(HttpServletRequest request, HttpServletResponse response) {

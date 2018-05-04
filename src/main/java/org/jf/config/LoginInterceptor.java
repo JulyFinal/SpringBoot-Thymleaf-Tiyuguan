@@ -15,7 +15,6 @@ public class LoginInterceptor implements HandlerInterceptor {
         // 2、从cookie中取token
         // 3、如果没有toke跳转到登录页面。
         // 4、取到token，需要调用sso系统的服务查询用户信息。
-        //TbUser user = userService.getUserByToken(request, response);
         HttpSession session = httpServletRequest.getSession();
         Login login= (Login) session.getAttribute("login");
         // 5、如果用户session已经过期，跳转到登录页面
