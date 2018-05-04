@@ -26,7 +26,7 @@ public class ApplyController {
 	@Autowired
 	private ApplyService service;
 	@Autowired
-	private ChangguanService cheweiService;
+	private ChangguanService changguanService;
 
 	/************************************************************************************************************************************************
 	个人申请
@@ -49,12 +49,12 @@ public class ApplyController {
 		SimpleDateFormat matter1=new SimpleDateFormat("yyyy-MM-dd hh:MM:ss");
 		String date = matter1.format(dt);
 
-		Changguan cw=cheweiService.getByid(cid);
+		Changguan cw=changguanService.getByid(cid);
 		bean.setTime(date);
 		bean.setUid(login.getId());
 		bean.setName(login.getName());
 		bean.setState("申请中");
-		bean.setChewei(cw.getNo());
+		bean.setCname(cw.getNo());
 		bean.setCid(Integer.parseInt(cid));
 		bean.setStarttime(starttime);
 		bean.setEndtime(endtime);
@@ -67,7 +67,7 @@ public class ApplyController {
 	// 申请界面
 	@RequestMapping("/addUI")
 	public ModelAndView addUI(HttpServletRequest request, HttpServletResponse response) {
-		List<Changguan> list = cheweiService.getAll();
+		List<Changguan> list = changguanService.getAll();
 		request.setAttribute("list", list);
 		return new ModelAndView("apply/add");
 	}
@@ -105,15 +105,15 @@ public class ApplyController {
 		System.out.println(bean.getId());
 		String state=request.getParameter("state");
 		if (state.equals("确认")) {
-			Changguan cw=cheweiService.getByid(bean.getCid()+"");
+			Changguan cw=changguanService.getByid(bean.getCid()+"");
 			cw.setState("确认");
-			cheweiService.update(cw);
+			changguanService.update(cw);
 		}
 		bean.setState(state);
 		service.updateopt(bean);
 		response.setContentType("text/html;charset=utf-8");
 		response.getWriter().write("<script>alert('操作成功');</script>");  
-		response.getWriter().write("<script> window.location='../apply/confirmlist' ;window.close();</script>");
+		response.getWriter().write("<script> window.location='../apply/clist' ;window.close();</script>");
 		response.getWriter().flush(); 
 	}
 

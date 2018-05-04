@@ -22,6 +22,7 @@ public class AdminController {
 	@Autowired
 	private AdminService adminService;
 	/**
+	 * 管理员列表
 	 */
 	@RequestMapping("/list")
 	public ModelAndView user(HttpServletRequest request, HttpServletResponse response) {
@@ -40,7 +41,7 @@ public class AdminController {
 		//查询条件显示
 		return new ModelAndView("admin/list");
 	}
-
+	//管理员修改页面
 	@RequestMapping("/editUI")
 	public ModelAndView editUI(HttpServletRequest request, HttpServletResponse response) {
 		String id=request.getParameter("id");
@@ -50,7 +51,7 @@ public class AdminController {
 		request.setAttribute("bean", admin);
 		return new ModelAndView("admin/edit");
 	}
-
+	//管理员修改
 	@RequestMapping("/edit")
 	public ModelAndView edit(HttpServletRequest request, HttpServletResponse response) {
 		String id=request.getParameter("id");
@@ -66,7 +67,7 @@ public class AdminController {
 		adminService.updateAdmin(admin);
 		return new ModelAndView("admin/success");
 	}
-
+	//管理员添加
 	@RequestMapping("/add")
 	public ModelAndView add(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		Admin admin = new Admin();

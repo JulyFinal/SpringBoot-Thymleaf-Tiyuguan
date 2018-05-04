@@ -26,5 +26,5 @@ public interface ChangguanService   {
 
 	void delete(int id);
 
-	String conutChewei();
+	String conutCname();
 }

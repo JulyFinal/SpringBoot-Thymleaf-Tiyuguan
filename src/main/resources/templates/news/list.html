@@ -40,7 +40,7 @@
                             </thead>
                             <tbody>
                                 <tr class="odd gradeX" th:each="bean:${list}">
-                                    <td th:text="${bean.title }"></td>
+                                    <td th:text="${bean.title}"></td>
                                     <td th:text="${bean.time }"></td>
                                     <td th:text="${bean.infos }"></td>
                                     <td class="center"><a th:href="@{'/news/editUI.do?id='+${bean.id }}"

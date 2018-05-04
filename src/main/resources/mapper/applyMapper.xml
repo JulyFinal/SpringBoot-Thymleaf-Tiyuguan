@@ -14,13 +14,13 @@
 	<!-- 添加 -->
 	<insert id="insert" parameterType="Apply" useGeneratedKeys="true"
 		keyProperty="id">
-		INSERT INTO t_apply(name,chewei,starttime,endtime,uid,cid,tel,state,time)
-		VALUES(#{name},#{chewei},#{starttime},#{endtime},#{uid},#{cid},#{tel},#{state},#{time})
+		INSERT INTO t_apply(name,cname,starttime,endtime,uid,cid,tel,state,time)
+		VALUES(#{name},#{cname},#{starttime},#{endtime},#{uid},#{cid},#{tel},#{state},#{time})
 	</insert>
 	<!-- 资料修改 -->
 	<update id="update" parameterType="Apply">
 		UPDATE t_apply SET
-		name=#{name},chewei=#{chewei},starttime=#{starttime},endtime=#{endtime},uid=#{uid},cid=#{cid},tel=#{tel},time=#{time},state=#{state}
+		name=#{name},cname=#{cname},starttime=#{starttime},endtime=#{endtime},uid=#{uid},cid=#{cid},tel=#{tel},time=#{time},state=#{state}
 		WHERE id=#{id}
 	</update>
 	<!-- 删除 -->

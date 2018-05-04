@@ -144,9 +144,9 @@ public class IndexController {
         List<Apply> list = applyService.getList();
         for (Apply apply : list) {
             String oldtime = apply.getTime();
-            if (oldtime.equals(date)) {
+            long oldchangguan=apply.getCid();
+            if (oldtime.equals(date)&&request.getParameter("id").equals(oldchangguan)) {
                 String starttime = request.getParameter("starttime");
-                String endtime = request.getParameter("endtime");
                 try {
                     Date starttimeFormat = new SimpleDateFormat("HH:mm").parse(starttime);
                     Date oldstarttimeFormat = new SimpleDateFormat("HH:mm").parse(apply.getStarttime());
@@ -171,7 +171,7 @@ public class IndexController {
         String id = request.getParameter("id");
         Changguan bl = changguanService.getByid(id);
         Apply ap = new Apply();
-        ap.setChewei(bl.getName());
+        ap.setCname(bl.getName());
         ap.setCid(Integer.parseInt(id));
         ap.setEndtime(request.getParameter("endtime"));
         ap.setName(login.getName());

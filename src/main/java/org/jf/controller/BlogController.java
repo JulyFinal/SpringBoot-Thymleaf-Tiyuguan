@@ -48,7 +48,7 @@ public class BlogController {
     }
 
     /**
-     * 添加用户
+     * 添加
      */
     @RequestMapping("/add")
     public ModelAndView add(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -57,6 +57,7 @@ public class BlogController {
         String infos = request.getParameter("infos");
         news.setTitle(title);
         news.setInfos(infos);
+        news.setUid(1);
         Date dt = new Date();
         SimpleDateFormat matter1 = new SimpleDateFormat("yyyy-MM-dd hh:MM:ss");
         String date = matter1.format(dt);

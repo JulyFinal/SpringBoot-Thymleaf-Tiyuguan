@@ -59,7 +59,7 @@ public class ChangguanServiceImpl implements ChangguanService {
 	}
 
 	@Override
-	public String conutChewei() {
+	public String conutCname() {
 		// TODO Auto-generated method stub
 		return null;
 	}

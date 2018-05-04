@@ -27,5 +27,5 @@ public interface ChangguanDao  {
 	
 	void delete(int id);
 	
-	String conutChewei();
+	String conutCname();
 }

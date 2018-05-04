@@ -11,7 +11,7 @@ public class Apply {
 	private long id;
 	private String name;
 	private long uid;
-	private String chewei;
+	private String cname;
 	private long cid;
 	private String time;
 	private String tel;
