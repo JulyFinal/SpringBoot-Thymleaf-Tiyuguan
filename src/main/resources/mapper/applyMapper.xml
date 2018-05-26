@@ -60,4 +60,8 @@
 	<select id="getNeedList" resultType="Apply">
 		SELECT * FROM t_apply WHERE state='申请中'
 	</select>
+	<!--查找当前场馆订单-->
+	<select id="getApplyFromCid" resultType="Apply">
+		SELECT * FROM t_apply WHERE cid=#{0}
+	</select>
 </mapper>

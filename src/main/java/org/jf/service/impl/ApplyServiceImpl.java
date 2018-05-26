@@ -84,4 +84,10 @@ public class ApplyServiceImpl implements ApplyService {
 		// TODO Auto-generated method stub
 		return dao.getByUid(id);
 	}
+
+	@Override
+	public List<Apply> getApplyFromCid(long cid) {
+		List<Apply> list=dao.getApplyFromCid(cid);
+		return list;
+	}
 }

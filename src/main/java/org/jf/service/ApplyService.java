@@ -28,4 +28,6 @@ public interface ApplyService {
 
 	String conutNotice();
 	List<Apply> getByUid(String id);
+	List<Apply> getApplyFromCid(long cid);
+
 }

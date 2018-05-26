@@ -10,18 +10,18 @@ import java.util.Map;
 @Mapper
 public interface NewsDao {
 	List<News> getForPage(Map map);
-	
+
 	List<News> getForIndex();
-	
+
 	News getByid(String id);
-	
-	
+
+
 	void insert(News bean);
-	
-	void update(News bean);	
-	
+
+	void update(News bean);
+
 	void delete(int id);
-	
+
 	String conutNews();
-	
+
 }

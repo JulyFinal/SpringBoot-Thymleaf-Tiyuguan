@@ -116,8 +116,11 @@ public class IndexController {
     @RequestMapping("/info")
     public ModelAndView info(HttpServletRequest request, HttpServletResponse response) {
         String id = request.getParameter("id");
+        long cid = Long.parseLong(id);
+        List<Apply> list = applyService.getApplyFromCid(cid);
         Changguan b = changguanService.getByid(id);
         request.setAttribute("bean", b);
+        request.setAttribute("list", list);
         return new ModelAndView("index/info");
     }
 
@@ -144,8 +147,11 @@ public class IndexController {
         List<Apply> list = applyService.getList();
         for (Apply apply : list) {
             String oldtime = apply.getTime();
-            long oldchangguan=apply.getCid();
-            if (oldtime.equals(date)&&request.getParameter("id").equals(oldchangguan)) {
+            long oldchangguan = apply.getCid();
+            String id = request.getParameter("id");
+            System.out.println(oldchangguan + " " + id);
+//            String oldCGcnam=apply.getCname();
+            if (oldtime.equals(date) && id.equals(oldchangguan)) {
                 String starttime = request.getParameter("starttime");
                 try {
                     Date starttimeFormat = new SimpleDateFormat("HH:mm").parse(starttime);
@@ -160,12 +166,11 @@ public class IndexController {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-//                if(apply.getStarttime().equals(starttime)){
-//                response.setContentType("text/html;charset=utf-8");
-//                response.getWriter().write("<script>alert('已被预约，请重新选定');</script>");
-//                response.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
-//                response.getWriter().flush();
-//                }
+            } else {
+                response.setContentType("text/html;charset=utf-8");
+                response.getWriter().write("<script>alert('已被预约，请重新选定');</script>");
+                response.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
+                response.getWriter().flush();
             }
         }
         String id = request.getParameter("id");
@@ -257,12 +262,7 @@ public class IndexController {
     @RequestMapping("/addcomment")
     public void comments(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession) throws IOException {
         Login login = (Login) httpSession.getAttribute("login");
-        if (login == null) {
-            response.setContentType("text/html;charset=utf-8");
-            response.getWriter().write("<script>alert('会话过期，请重新登陆！');</script>");
-            response.getWriter().write("<script> window.location='../index/loginUI' ;window.close();</script>");
-            response.getWriter().flush();
-        }
+
         int uid = login.getId();
         String name = login.getName();
         String message = request.getParameter("infos");
@@ -287,12 +287,7 @@ public class IndexController {
     @RequestMapping("/addccomment")
     public void ccomments(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession) throws IOException {
         Login login = (Login) httpSession.getAttribute("login");
-        if (login == null) {
-            response.setContentType("text/html;charset=utf-8");
-            response.getWriter().write("<script>alert('会话过期，请重新登陆！');</script>");
-            response.getWriter().write("<script> window.location='../index/loginUI' ;window.close();</script>");
-            response.getWriter().flush();
-        }
+
         int uid = login.getId();
         String name = login.getName();
         String message = request.getParameter("infos");
@@ -315,58 +310,11 @@ public class IndexController {
         response.getWriter().flush();
     }
 
-    @RequestMapping("/add")
-    public void add(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession) throws IOException {
-        Login login = (Login) httpSession.getAttribute("login");
-        if (login == null) {
-            response.setContentType("text/html;charset=utf-8");
-            response.getWriter().write("<script>alert('退出登录');</script>");
-            response.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
-            response.getWriter().flush();
-        }
-        Blog bean = new Blog();
-        bean.setTitle(request.getParameter("title"));
-        bean.setInfos(request.getParameter("infos"));
-        bean.setUid(login.getId());
-        Date dt = new Date();
-        SimpleDateFormat matter1 = new SimpleDateFormat("yyyy-MM-dd hh:MM:ss");
-        String date = matter1.format(dt);
-        bean.setTime(date);
-        blogService.insert(bean);
-        response.setContentType("text/html;charset=utf-8");
-        response.getWriter().write("<script>alert('操作成功！');</script>");
-        response.getWriter().write("<script> window.location='../index/bloglist' ;window.close();</script>");
-        response.getWriter().flush();
-    }
-
-    @RequestMapping("/list")
-    public ModelAndView list(HttpServletRequest request, HttpServletResponse response) {
-        Page page = new Page("filter_form");
-        page.setPageSize(6);
-        String currentPage = request.getParameter("page.currentPage");
-        if (StringUitl.IsNotNull(currentPage)) {
-            page.setCurrentPage(Integer.parseInt(currentPage));
-        }
-        //拼装map进行查询
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("page", page);
-        List list = changguanService.getForPage(map);
-        //展示的数据
-        request.setAttribute("list", list);
-        request.setAttribute("paging", page.getPageStr());
-        System.out.println(page.getPageStr());
-        return new ModelAndView("index/list");
-    }
 
     @RequestMapping("/mycenter")
     public ModelAndView myorder(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession) throws IOException {
         Login login = (Login) httpSession.getAttribute("login");
-        if (login == null) {
-            response.setContentType("text/html;charset=utf-8");
-            response.getWriter().write("<script>alert('退出登录');</script>");
-            response.getWriter().write("<script> window.location='../index/loginUI' ;window.close();</script>");
-            response.getWriter().flush();
-        }
+
         List<Blog> blist = blogService.getByUid(login.getId() + "");
         List<Apply> alist = applyService.getByUid(login.getId() + "");
         request.setAttribute("blist", blist);

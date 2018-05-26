@@ -8,7 +8,6 @@ public class StringUitl {
 	/**
 	 *  判断一个字符串是否为空
 	 * @param str
-	 * @return
 	 */
 	public static boolean IsNull(String str){
 		if(str==null||"".equals(str)||"".equals(str.trim())){
@@ -19,7 +18,6 @@ public class StringUitl {
 	/**
 	 *  判断一个字符串是否为非空
 	 * @param str
-	 * @return
 	 */
 	public static boolean IsNotNull(String str){
 		if(str==null||"".equals(str)||"".equals(str.trim())){
@@ -29,10 +27,6 @@ public class StringUitl {
 	}
 	/**
 	 * 转换成小写
-	 *@author wangym
-	 *@date Aug 15, 2012 9:16:41 AM
-	 * @param src
-	 * @return
 	 */
 	public static String tranStartCharToLower(String src)
 	{
@@ -48,10 +42,6 @@ public class StringUitl {
 	}
 	/**
 	 * 去掉字符串两端的空格
-	 *@author wangym
-	 *@date Aug 15, 2012 9:13:47 AM
-	 * @param str
-	 * @return
 	 */
 	public static String toTrim(String str)
 	{
@@ -64,7 +54,6 @@ public class StringUitl {
 	}
 	/**
 	 * 获取项目路径
-	 * @return
 	 */
 	public static String getWebRootPath(){
 		String filePath=new StringUitl().getClass().getResource("/").getPath();
@@ -82,7 +71,6 @@ public class StringUitl {
 	
 	/**
 	 * 如果是null返回空字符串
-	 * @return arg
 	 */
 	public static String SiftNull(String arg){
 		String rt = "";
@@ -93,7 +81,6 @@ public class StringUitl {
 	}
 	/**
 	 * 如果是null返回空字符串
-	 * @return arg
 	 */
 	public static String SiftNull(Object arg){
 		String rt = "";
@@ -104,7 +91,6 @@ public class StringUitl {
 	}
 	/**
 	 * 获取报表公共的map对象
-	 * @return
 	 */
 	public static Map<String, Object>  getReportHashMap(){
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -133,7 +119,6 @@ public class StringUitl {
 	
 	/**
 	 * 获取组装List的共用map对象
-	 * @return
 	 */
 	public static Map getCombineListMap(){
 		Map map = new HashMap();
@@ -188,9 +173,6 @@ public class StringUitl {
 	
 	/**
 	 * 异常信息toString
-	 * 
-	 * @param ex
-	 * @return
 	 */
 	public static String getExceString(Exception ex){
 		StackTraceElement [] arry_ex = ex.getStackTrace(); 

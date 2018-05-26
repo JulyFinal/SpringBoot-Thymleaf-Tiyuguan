@@ -100,6 +100,7 @@ public class LoginController {
 				httpSession.setAttribute("login",login);
 			}
 		}
+		//已经注销
 		if (login.getRole().equals("admin")) {
 			//系统管理
 			List<ChildMenu> clist1 = new ArrayList<ChildMenu>();
@@ -153,7 +154,7 @@ public class LoginController {
 			mlist.add(m3);
 			mlist.add(mn);
 		}
-		request.setAttribute("menulist", mlist);
+//		request.setAttribute("menulist", mlist);
 		return new ModelAndView("main/index");
 	}
 	@RequestMapping("/logout")

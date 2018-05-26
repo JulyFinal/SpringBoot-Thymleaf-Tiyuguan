@@ -22,7 +22,7 @@ management:
         enabled: false
 server:
     context-path: / #配置web根路径,默认是/
-    port: 8080 		#配置服务端口,默认是8080
+    port: 8081 		#配置服务端口,默认是8080
 spring:
     datasource:
         druid: #配置druid数据源

@@ -68,6 +68,41 @@
                     <p th:text="${bean.infos}"></p>
                 </div>
             </div>
+
+
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="widget-box">
+                            <div class="widget-content nopadding">
+                                <table class="table table-bordered data-table">
+                                    <thead>
+                                    <tr>
+                                        <th>申请人</th>
+                                        <th>申请的场馆</th>
+                                        <th>联系电话</th>
+                                        <th>申请时间</th>
+                                        <th>使用时间</th>
+                                        <th>状态</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="odd gradeX" th:each="list:${list}">
+                                        <td th:text="${list.name}"></td>
+                                        <td th:text="${list.cname}"></td>
+                                        <td th:text="${list.tel}"></td>
+                                        <td th:text="${list.time}"></td>
+                                        <td th:text="${list.starttime}+'-'+${list.endtime }"></td>
+                                        <td th:text="${list.state}"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <!-- 左 -->
 
@@ -76,13 +111,12 @@
             <!-- 文章作者部分 -->
             <div class="user-center clearfix">
 
-                <div class="author-tit">PROMULGATOR</div>
+                <div class="author-tit"></div>
 
                 <span class="headimg center-block"><a href=""><img
                         th:src="@{~/images/lo.png}"> </a> </span>
                 <div class="user-info clearfix">
-                    <a href="" class="user-name"><h4 th:if="${session.login} !=null" th:text="${session.login.name}"></h4> </a> <small>hello,
-                    world</small>
+                    <a href="" class="user-name"><h4 th:if="${session.login} !=null" th:text="${session.login.name}"></h4> </a> <small></small>
                 </div>
 
                 <button type="button" class="btn btn-default">

@@ -9,17 +9,17 @@ import java.util.List;
 
 @Mapper
 public interface ApplyDao {
-	
+
 	List<Apply> getList();
-	
+
 	List<Apply> getMyList(String uid);
-	
+
 	List<Apply> getNeedList();
-	
+
 	List<Apply> getConfirmedList();
-	
+
 	List<Apply> checkExist();
-	
+
 	Apply getByid(String id);
 
 	void insert(Apply bean);
@@ -31,5 +31,7 @@ public interface ApplyDao {
 	String conutNotice();
 
 	List<Apply> getByUid(String id);
+
+	List<Apply> getApplyFromCid(long id);
 
 }

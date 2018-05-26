@@ -36,7 +36,7 @@
 		delete from t_blog where
 		id=#{id}
 	</delete>
-	<!-- 删除 -->
+
 	<select id="getForIndex" resultType="Blog">
 		SELECT
 		*FROM t_blog ORDER BY
