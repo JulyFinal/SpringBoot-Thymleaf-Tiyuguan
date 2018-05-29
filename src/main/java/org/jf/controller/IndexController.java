@@ -149,28 +149,20 @@ public class IndexController {
             String oldtime = apply.getTime();
             long oldchangguan = apply.getCid();
             String id = request.getParameter("id");
-            System.out.println(oldchangguan + " " + id);
-//            String oldCGcnam=apply.getCname();
-            if (oldtime.equals(date) && id.equals(oldchangguan)) {
-                String starttime = request.getParameter("starttime");
-                try {
-                    Date starttimeFormat = new SimpleDateFormat("HH:mm").parse(starttime);
-                    Date oldstarttimeFormat = new SimpleDateFormat("HH:mm").parse(apply.getStarttime());
-                    Date oldendtimeFormat = new SimpleDateFormat("HH:mm").parse(apply.getEndtime());
-                    if (isEffectiveDate.isEffectiveDate(starttimeFormat, oldstarttimeFormat, oldendtimeFormat)) {
-                        response.setContentType("text/html;charset=utf-8");
-                        response.getWriter().write("<script>alert('已被预约，请重新选定');</script>");
-                        response.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
-                        response.getWriter().flush();
-                    }
-                } catch (ParseException e) {
-                    e.printStackTrace();
+//            System.out.println(oldchangguan + " " + id);
+            String starttime = request.getParameter("starttime");
+            try {
+                Date starttimeFormat = new SimpleDateFormat("HH:mm").parse(starttime);
+                Date oldstarttimeFormat = new SimpleDateFormat("HH:mm").parse(apply.getStarttime());
+                Date oldendtimeFormat = new SimpleDateFormat("HH:mm").parse(apply.getEndtime());
+                if (isEffectiveDate.isEffectiveDate(starttimeFormat, oldstarttimeFormat, oldendtimeFormat) && oldtime.equals(date) && Long.parseLong(id)==oldchangguan) {
+                    response.setContentType("text/html;charset=utf-8");
+                    response.getWriter().write("<script>alert('已被预约，请重新选定');</script>");
+                    response.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
+                    response.getWriter().flush();
                 }
-            } else {
-                response.setContentType("text/html;charset=utf-8");
-                response.getWriter().write("<script>alert('已被预约，请重新选定');</script>");
-                response.getWriter().write("<script> window.location='../index/index' ;window.close();</script>");
-                response.getWriter().flush();
+            } catch (ParseException e) {
+                e.printStackTrace();
             }
         }
         String id = request.getParameter("id");
@@ -186,12 +178,12 @@ public class IndexController {
         ap.setTime(date);
         ap.setUid(login.getId());
         applyService.insertopt(ap);
-
         response.setContentType("text/html;charset=utf-8");
         response.getWriter().write("<script>alert('操作成功！');</script>");
         response.getWriter().write("<script> window.location='../index/mycenter' ;window.close();</script>");
         response.getWriter().flush();
     }
+
 
     @RequestMapping("/chuangguanlist")
     public ModelAndView chuangguanlist(HttpServletRequest request, HttpServletResponse response) {
@@ -233,6 +225,24 @@ public class IndexController {
     @RequestMapping("/addBlog")
     public ModelAndView addBlog(HttpServletRequest request, HttpServletResponse response) {
         return new ModelAndView("index/addBlog");
+    }
+
+    @RequestMapping("/addBlogInfo")
+    public ModelAndView addBlogInfo(HttpServletRequest request, HttpServletResponse response) {
+        Page page = new Page("filter_form");
+        page.setPageSize(8);
+        String currentPage = request.getParameter("page.currentPage");
+        if (StringUitl.IsNotNull(currentPage)) {
+            page.setCurrentPage(Integer.parseInt(currentPage));
+        }
+        //拼装map进行查询
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("page", page);
+        List list = blogService.getForPage(map);
+        //展示的数据
+        request.setAttribute("list", list);
+        request.setAttribute("paging", page.getPageStr());
+        return new ModelAndView("index/bloglist");
     }
 
     @RequestMapping("/bloginfo")
